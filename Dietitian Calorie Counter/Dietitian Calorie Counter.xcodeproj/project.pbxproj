@@ -11,6 +11,52 @@
 		FE4819632B84F43D00687C84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4819622B84F43D00687C84 /* ContentView.swift */; };
 		FE4819652B84F44000687C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4819642B84F44000687C84 /* Assets.xcassets */; };
 		FE4819682B84F44000687C84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4819672B84F44000687C84 /* Preview Assets.xcassets */; };
+		FE48196F2B84F5C800687C84 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE48196E2B84F5C800687C84 /* NavigationController.swift */; };
+		FE481C7F2B84FA7F00687C84 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481C7E2B84FA7E00687C84 /* OnboardingContentView.swift */; };
+		FE481C812B84FA8600687C84 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481C802B84FA8600687C84 /* HomeView.swift */; };
+		FE481C832B84FA8B00687C84 /* OnBoardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481C822B84FA8B00687C84 /* OnBoardingStep.swift */; };
+		FE481C862B84FB9E00687C84 /* LocalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481C852B84FB9E00687C84 /* LocalizationService.swift */; };
+		FE481C882B84FBA300687C84 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481C872B84FBA300687C84 /* String+Localization.swift */; };
+		FE481C8A2B84FBA800687C84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE481C892B84FBA800687C84 /* Localizable.strings */; };
+		FE481C8D2B84FBD100687C84 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481C8C2B84FBD100687C84 /* LottieView.swift */; };
+		FE481C8F2B84FBD800687C84 /* coin-lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = FE481C8E2B84FBD800687C84 /* coin-lottie.json */; };
+		FE481C912B84FBDC00687C84 /* onboarding-lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = FE481C902B84FBDC00687C84 /* onboarding-lottie.json */; };
+		FE481C9B2B84FC0400687C84 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE481C962B84FC0400687C84 /* Poppins-SemiBold.ttf */; };
+		FE481C9C2B84FC0400687C84 /* Hagia Pro Extra Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE481C972B84FC0400687C84 /* Hagia Pro Extra Bold.otf */; };
+		FE481C9D2B84FC0400687C84 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE481C982B84FC0400687C84 /* Poppins-Bold.ttf */; };
+		FE481C9E2B84FC0400687C84 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE481C992B84FC0400687C84 /* Poppins-Light.ttf */; };
+		FE481C9F2B84FC0400687C84 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481C9A2B84FC0400687C84 /* FontManager.swift */; };
+		FE481CA22B84FC3200687C84 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CA02B84FC3200687C84 /* Colors.swift */; };
+		FE481CA32B84FC3200687C84 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CA12B84FC3200687C84 /* Color+Extension.swift */; };
+		FE481CB32B84FD3000687C84 /* AICutRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CA92B84FD2E00687C84 /* AICutRectangle.swift */; };
+		FE481CB42B84FD3000687C84 /* CircleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAA2B84FD2E00687C84 /* CircleBackground.swift */; };
+		FE481CB52B84FD3000687C84 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAB2B84FD2F00687C84 /* HorizontalScrollView.swift */; };
+		FE481CB62B84FD3000687C84 /* PhotoEditorRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAC2B84FD2F00687C84 /* PhotoEditorRectangle.swift */; };
+		FE481CB72B84FD3000687C84 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAD2B84FD2F00687C84 /* PhotoPickerView.swift */; };
+		FE481CB82B84FD3000687C84 /* AnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAE2B84FD2F00687C84 /* AnimatedBackground.swift */; };
+		FE481CB92B84FD3000687C84 /* SubscriptionNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAF2B84FD2F00687C84 /* SubscriptionNavigationButton.swift */; };
+		FE481CBA2B84FD3000687C84 /* StaticBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CB02B84FD2F00687C84 /* StaticBackground.swift */; };
+		FE481CBB2B84FD3000687C84 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CB12B84FD3000687C84 /* TitleView.swift */; };
+		FE481CBC2B84FD3000687C84 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CB22B84FD3000687C84 /* NavigationLazyView.swift */; };
+		FE481CBF2B84FD3A00687C84 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CBD2B84FD3900687C84 /* MainView.swift */; };
+		FE481CC02B84FD3A00687C84 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CBE2B84FD3A00687C84 /* MainViewModel.swift */; };
+		FE481CC82B84FDCA00687C84 /* FAQItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CC62B84FDCA00687C84 /* FAQItem.swift */; };
+		FE481CC92B84FDCA00687C84 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CC72B84FDCA00687C84 /* MenuItem.swift */; };
+		FE481CD22B84FDD600687C84 /* CustomToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CCA2B84FDD500687C84 /* CustomToggleStyle.swift */; };
+		FE481CD32B84FDD600687C84 /* MenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CCB2B84FDD500687C84 /* MenuContent.swift */; };
+		FE481CD42B84FDD600687C84 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CCC2B84FDD500687C84 /* LanguageView.swift */; };
+		FE481CD52B84FDD600687C84 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CCD2B84FDD500687C84 /* EmailHelper.swift */; };
+		FE481CD62B84FDD600687C84 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CCE2B84FDD500687C84 /* AboutView.swift */; };
+		FE481CD72B84FDD600687C84 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CCF2B84FDD600687C84 /* FAQView.swift */; };
+		FE481CD82B84FDD600687C84 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CD02B84FDD600687C84 /* SettingsView.swift */; };
+		FE481CD92B84FDD600687C84 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CD12B84FDD600687C84 /* SideMenu.swift */; };
+		FE481CDE2B84FDF900687C84 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CDB2B84FDF800687C84 /* CustomTabBar.swift */; };
+		FE481CDF2B84FDF900687C84 /* AnimatedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CDC2B84FDF800687C84 /* AnimatedShape.swift */; };
+		FE481CE02B84FDF900687C84 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CDD2B84FDF900687C84 /* TabBarButton.swift */; };
+		FE481CE32B84FF5900687C84 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FE481CE22B84FF5900687C84 /* Lottie */; };
+		FE481CF42B8501D600687C84 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CF32B8501D600687C84 /* CustomButtons.swift */; };
+		FE481CF62B85031700687C84 /* AICutColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CF52B85031700687C84 /* AICutColors.swift */; };
+		FE481CFC2B85112300687C84 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE481CFB2B85112300687C84 /* info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +65,54 @@
 		FE4819622B84F43D00687C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE4819642B84F44000687C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE4819672B84F44000687C84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE48196E2B84F5C800687C84 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		FE481C7E2B84FA7E00687C84 /* OnboardingContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		FE481C802B84FA8600687C84 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FE481C822B84FA8B00687C84 /* OnBoardingStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingStep.swift; sourceTree = "<group>"; };
+		FE481C852B84FB9E00687C84 /* LocalizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationService.swift; sourceTree = "<group>"; };
+		FE481C872B84FBA300687C84 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		FE481C892B84FBA800687C84 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		FE481C8C2B84FBD100687C84 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		FE481C8E2B84FBD800687C84 /* coin-lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-lottie.json"; sourceTree = "<group>"; };
+		FE481C902B84FBDC00687C84 /* onboarding-lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "onboarding-lottie.json"; sourceTree = "<group>"; };
+		FE481C932B84FBF300687C84 /* MajorMonoDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MajorMonoDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		FE481C942B84FBF800687C84 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		FE481C952B84FBFD00687C84 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		FE481C962B84FC0400687C84 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		FE481C972B84FC0400687C84 /* Hagia Pro Extra Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hagia Pro Extra Bold.otf"; sourceTree = "<group>"; };
+		FE481C982B84FC0400687C84 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		FE481C992B84FC0400687C84 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		FE481C9A2B84FC0400687C84 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		FE481CA02B84FC3200687C84 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FE481CA12B84FC3200687C84 /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		FE481CA92B84FD2E00687C84 /* AICutRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AICutRectangle.swift; sourceTree = "<group>"; };
+		FE481CAA2B84FD2E00687C84 /* CircleBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBackground.swift; sourceTree = "<group>"; };
+		FE481CAB2B84FD2F00687C84 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
+		FE481CAC2B84FD2F00687C84 /* PhotoEditorRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEditorRectangle.swift; sourceTree = "<group>"; };
+		FE481CAD2B84FD2F00687C84 /* PhotoPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		FE481CAE2B84FD2F00687C84 /* AnimatedBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedBackground.swift; sourceTree = "<group>"; };
+		FE481CAF2B84FD2F00687C84 /* SubscriptionNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionNavigationButton.swift; sourceTree = "<group>"; };
+		FE481CB02B84FD2F00687C84 /* StaticBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticBackground.swift; sourceTree = "<group>"; };
+		FE481CB12B84FD3000687C84 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		FE481CB22B84FD3000687C84 /* NavigationLazyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
+		FE481CBD2B84FD3900687C84 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FE481CBE2B84FD3A00687C84 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FE481CC62B84FDCA00687C84 /* FAQItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQItem.swift; sourceTree = "<group>"; };
+		FE481CC72B84FDCA00687C84 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		FE481CCA2B84FDD500687C84 /* CustomToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomToggleStyle.swift; sourceTree = "<group>"; };
+		FE481CCB2B84FDD500687C84 /* MenuContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuContent.swift; sourceTree = "<group>"; };
+		FE481CCC2B84FDD500687C84 /* LanguageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
+		FE481CCD2B84FDD500687C84 /* EmailHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		FE481CCE2B84FDD500687C84 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		FE481CCF2B84FDD600687C84 /* FAQView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		FE481CD02B84FDD600687C84 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FE481CD12B84FDD600687C84 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		FE481CDB2B84FDF800687C84 /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		FE481CDC2B84FDF800687C84 /* AnimatedShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedShape.swift; sourceTree = "<group>"; };
+		FE481CDD2B84FDF900687C84 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		FE481CF32B8501D600687C84 /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		FE481CF52B85031700687C84 /* AICutColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AICutColors.swift; sourceTree = "<group>"; };
+		FE481CFB2B85112300687C84 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE481CE32B84FF5900687C84 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +146,12 @@
 		FE48195F2B84F43D00687C84 /* Dietitian Calorie Counter */ = {
 			isa = PBXGroup;
 			children = (
+				FE481CF32B8501D600687C84 /* CustomButtons.swift */,
+				FE481CFB2B85112300687C84 /* info.plist */,
+				FE481C8B2B84FBBD00687C84 /* Files */,
+				FE481C842B84FB6F00687C84 /* Localization */,
+				FE481C7C2B84FA5D00687C84 /* Modules */,
+				FE48196E2B84F5C800687C84 /* NavigationController.swift */,
 				FE4819602B84F43D00687C84 /* Dietitian_Calorie_CounterApp.swift */,
 				FE4819622B84F43D00687C84 /* ContentView.swift */,
 				FE4819642B84F44000687C84 /* Assets.xcassets */,
@@ -65,6 +166,144 @@
 				FE4819672B84F44000687C84 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE481C7C2B84FA5D00687C84 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CDA2B84FDE900687C84 /* Tab Bar */,
+				FE481CC12B84FD4A00687C84 /* Side Menu */,
+				FE481CA62B84FCF200687C84 /* Main */,
+				FE481C7D2B84FA6C00687C84 /* Onboarding */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		FE481C7D2B84FA6C00687C84 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FE481C822B84FA8B00687C84 /* OnBoardingStep.swift */,
+				FE481C802B84FA8600687C84 /* HomeView.swift */,
+				FE481C7E2B84FA7E00687C84 /* OnboardingContentView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FE481C842B84FB6F00687C84 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FE481C852B84FB9E00687C84 /* LocalizationService.swift */,
+				FE481C872B84FBA300687C84 /* String+Localization.swift */,
+				FE481C892B84FBA800687C84 /* Localizable.strings */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
+		FE481C8B2B84FBBD00687C84 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE481C922B84FBEA00687C84 /* Fonts */,
+				FE481C8C2B84FBD100687C84 /* LottieView.swift */,
+				FE481C8E2B84FBD800687C84 /* coin-lottie.json */,
+				FE481C902B84FBDC00687C84 /* onboarding-lottie.json */,
+				FE481CA12B84FC3200687C84 /* Color+Extension.swift */,
+				FE481CA02B84FC3200687C84 /* Colors.swift */,
+				FE481CF52B85031700687C84 /* AICutColors.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		FE481C922B84FBEA00687C84 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FE481C932B84FBF300687C84 /* MajorMonoDisplay-Regular.ttf */,
+				FE481C942B84FBF800687C84 /* Poppins-Medium.ttf */,
+				FE481C952B84FBFD00687C84 /* Poppins-Regular.ttf */,
+				FE481C9A2B84FC0400687C84 /* FontManager.swift */,
+				FE481C972B84FC0400687C84 /* Hagia Pro Extra Bold.otf */,
+				FE481C982B84FC0400687C84 /* Poppins-Bold.ttf */,
+				FE481C992B84FC0400687C84 /* Poppins-Light.ttf */,
+				FE481C962B84FC0400687C84 /* Poppins-SemiBold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		FE481CA62B84FCF200687C84 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CA82B84FD1300687C84 /* Controller */,
+				FE481CA72B84FD0C00687C84 /* View */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		FE481CA72B84FD0C00687C84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CA92B84FD2E00687C84 /* AICutRectangle.swift */,
+				FE481CAE2B84FD2F00687C84 /* AnimatedBackground.swift */,
+				FE481CAA2B84FD2E00687C84 /* CircleBackground.swift */,
+				FE481CAB2B84FD2F00687C84 /* HorizontalScrollView.swift */,
+				FE481CB22B84FD3000687C84 /* NavigationLazyView.swift */,
+				FE481CAC2B84FD2F00687C84 /* PhotoEditorRectangle.swift */,
+				FE481CAD2B84FD2F00687C84 /* PhotoPickerView.swift */,
+				FE481CB02B84FD2F00687C84 /* StaticBackground.swift */,
+				FE481CAF2B84FD2F00687C84 /* SubscriptionNavigationButton.swift */,
+				FE481CB12B84FD3000687C84 /* TitleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE481CA82B84FD1300687C84 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CBD2B84FD3900687C84 /* MainView.swift */,
+				FE481CBE2B84FD3A00687C84 /* MainViewModel.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FE481CC12B84FD4A00687C84 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CC52B84FDBA00687C84 /* Model */,
+				FE481CC42B84FDAE00687C84 /* View */,
+			);
+			name = "Side Menu";
+			sourceTree = "<group>";
+		};
+		FE481CC42B84FDAE00687C84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CCE2B84FDD500687C84 /* AboutView.swift */,
+				FE481CCA2B84FDD500687C84 /* CustomToggleStyle.swift */,
+				FE481CCD2B84FDD500687C84 /* EmailHelper.swift */,
+				FE481CCF2B84FDD600687C84 /* FAQView.swift */,
+				FE481CCC2B84FDD500687C84 /* LanguageView.swift */,
+				FE481CCB2B84FDD500687C84 /* MenuContent.swift */,
+				FE481CD02B84FDD600687C84 /* SettingsView.swift */,
+				FE481CD12B84FDD600687C84 /* SideMenu.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FE481CC52B84FDBA00687C84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CC62B84FDCA00687C84 /* FAQItem.swift */,
+				FE481CC72B84FDCA00687C84 /* MenuItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FE481CDA2B84FDE900687C84 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CDC2B84FDF800687C84 /* AnimatedShape.swift */,
+				FE481CDB2B84FDF800687C84 /* CustomTabBar.swift */,
+				FE481CDD2B84FDF900687C84 /* TabBarButton.swift */,
+			);
+			path = "Tab Bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +322,9 @@
 			dependencies = (
 			);
 			name = "Dietitian Calorie Counter";
+			packageProductDependencies = (
+				FE481CE22B84FF5900687C84 /* Lottie */,
+			);
 			productName = "Dietitian Calorie Counter";
 			productReference = FE48195D2B84F43D00687C84 /* Dietitian Calorie Counter.app */;
 			productType = "com.apple.product-type.application";
@@ -109,8 +351,19 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				"zh-Hans",
+				ja,
+				es,
+				it,
+				tr,
+				ru,
+				fr,
 			);
 			mainGroup = FE4819542B84F43D00687C84;
+			packageReferences = (
+				FE481CE12B84FF5900687C84 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = FE48195E2B84F43D00687C84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +378,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE481CFC2B85112300687C84 /* info.plist in Resources */,
 				FE4819682B84F44000687C84 /* Preview Assets.xcassets in Resources */,
+				FE481C9E2B84FC0400687C84 /* Poppins-Light.ttf in Resources */,
+				FE481C8A2B84FBA800687C84 /* Localizable.strings in Resources */,
 				FE4819652B84F44000687C84 /* Assets.xcassets in Resources */,
+				FE481C9D2B84FC0400687C84 /* Poppins-Bold.ttf in Resources */,
+				FE481C9B2B84FC0400687C84 /* Poppins-SemiBold.ttf in Resources */,
+				FE481C9C2B84FC0400687C84 /* Hagia Pro Extra Bold.otf in Resources */,
+				FE481C8F2B84FBD800687C84 /* coin-lottie.json in Resources */,
+				FE481C912B84FBDC00687C84 /* onboarding-lottie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +398,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE481CC82B84FDCA00687C84 /* FAQItem.swift in Sources */,
+				FE481CD62B84FDD600687C84 /* AboutView.swift in Sources */,
+				FE481C9F2B84FC0400687C84 /* FontManager.swift in Sources */,
+				FE481CD22B84FDD600687C84 /* CustomToggleStyle.swift in Sources */,
+				FE481CA22B84FC3200687C84 /* Colors.swift in Sources */,
+				FE481C862B84FB9E00687C84 /* LocalizationService.swift in Sources */,
 				FE4819632B84F43D00687C84 /* ContentView.swift in Sources */,
+				FE481CF62B85031700687C84 /* AICutColors.swift in Sources */,
+				FE481C8D2B84FBD100687C84 /* LottieView.swift in Sources */,
+				FE481CBA2B84FD3000687C84 /* StaticBackground.swift in Sources */,
+				FE481CB42B84FD3000687C84 /* CircleBackground.swift in Sources */,
+				FE48196F2B84F5C800687C84 /* NavigationController.swift in Sources */,
 				FE4819612B84F43D00687C84 /* Dietitian_Calorie_CounterApp.swift in Sources */,
+				FE481CB32B84FD3000687C84 /* AICutRectangle.swift in Sources */,
+				FE481CD32B84FDD600687C84 /* MenuContent.swift in Sources */,
+				FE481CD42B84FDD600687C84 /* LanguageView.swift in Sources */,
+				FE481CD52B84FDD600687C84 /* EmailHelper.swift in Sources */,
+				FE481CE02B84FDF900687C84 /* TabBarButton.swift in Sources */,
+				FE481CDE2B84FDF900687C84 /* CustomTabBar.swift in Sources */,
+				FE481CA32B84FC3200687C84 /* Color+Extension.swift in Sources */,
+				FE481CB82B84FD3000687C84 /* AnimatedBackground.swift in Sources */,
+				FE481CB52B84FD3000687C84 /* HorizontalScrollView.swift in Sources */,
+				FE481CB62B84FD3000687C84 /* PhotoEditorRectangle.swift in Sources */,
+				FE481C812B84FA8600687C84 /* HomeView.swift in Sources */,
+				FE481CDF2B84FDF900687C84 /* AnimatedShape.swift in Sources */,
+				FE481CD82B84FDD600687C84 /* SettingsView.swift in Sources */,
+				FE481C832B84FA8B00687C84 /* OnBoardingStep.swift in Sources */,
+				FE481CBC2B84FD3000687C84 /* NavigationLazyView.swift in Sources */,
+				FE481CB92B84FD3000687C84 /* SubscriptionNavigationButton.swift in Sources */,
+				FE481CD92B84FDD600687C84 /* SideMenu.swift in Sources */,
+				FE481CF42B8501D600687C84 /* CustomButtons.swift in Sources */,
+				FE481CC92B84FDCA00687C84 /* MenuItem.swift in Sources */,
+				FE481CBB2B84FD3000687C84 /* TitleView.swift in Sources */,
+				FE481CBF2B84FD3A00687C84 /* MainView.swift in Sources */,
+				FE481CD72B84FDD600687C84 /* FAQView.swift in Sources */,
+				FE481C7F2B84FA7F00687C84 /* OnboardingContentView.swift in Sources */,
+				FE481CB72B84FD3000687C84 /* PhotoPickerView.swift in Sources */,
+				FE481C882B84FBA300687C84 /* String+Localization.swift in Sources */,
+				FE481CC02B84FD3A00687C84 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE481CE12B84FF5900687C84 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE481CE22B84FF5900687C84 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE481CE12B84FF5900687C84 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE4819552B84F43D00687C84 /* Project object */;
 }
