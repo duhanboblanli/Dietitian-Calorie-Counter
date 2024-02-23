@@ -57,6 +57,7 @@
 		FE481CF42B8501D600687C84 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CF32B8501D600687C84 /* CustomButtons.swift */; };
 		FE481CF62B85031700687C84 /* AICutColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CF52B85031700687C84 /* AICutColors.swift */; };
 		FE481CFC2B85112300687C84 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE481CFB2B85112300687C84 /* info.plist */; };
+		FEDD51432B88C1AE00338BB1 /* DailyOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD51422B88C1AE00338BB1 /* DailyOverviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		FE481CF32B8501D600687C84 /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		FE481CF52B85031700687C84 /* AICutColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AICutColors.swift; sourceTree = "<group>"; };
 		FE481CFB2B85112300687C84 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		FEDD51422B88C1AE00338BB1 /* DailyOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyOverviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				FE4819622B84F43D00687C84 /* ContentView.swift */,
 				FE4819642B84F44000687C84 /* Assets.xcassets */,
 				FE4819662B84F44000687C84 /* Preview Content */,
+				FEDD51422B88C1AE00338BB1 /* DailyOverviewView.swift */,
 			);
 			path = "Dietitian Calorie Counter";
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				FE481CB82B84FD3000687C84 /* AnimatedBackground.swift in Sources */,
 				FE481CB52B84FD3000687C84 /* HorizontalScrollView.swift in Sources */,
 				FE481CB62B84FD3000687C84 /* PhotoEditorRectangle.swift in Sources */,
+				FEDD51432B88C1AE00338BB1 /* DailyOverviewView.swift in Sources */,
 				FE481C812B84FA8600687C84 /* HomeView.swift in Sources */,
 				FE481CDF2B84FDF900687C84 /* AnimatedShape.swift in Sources */,
 				FE481CD82B84FDD600687C84 /* SettingsView.swift in Sources */,

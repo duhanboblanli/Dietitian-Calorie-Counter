@@ -86,10 +86,34 @@ struct MainView: View {
                 // Subs Button
                 SubscriptionNavigationButton()
                     .frame(maxWidth: .infinity, maxHeight: 100, alignment: .center)
-                    .padding(.top,20) // 20 + 16(default) = 36
+                    .padding(.top,20)
                     .padding(.horizontal, 25)
                     .padding(.bottom, 20)
+                
+                let intake = Binding<Double>.constant(1500)
+                let caloriesBurned = Binding<Int>.constant(500)
+                let goalSetToday = Binding<Double>.constant(2000)
+                let ratio = ((1500.0 - 500.0) / 2000.0) * 100.0
+                let goalRatio = Binding<Double>.constant(ratio)
+                
+                DailyOverView(intake: intake, caloriesBurned: caloriesBurned, goalSetToday: goalSetToday, goalRatio: goalRatio)
+                    .frame(maxWidth: .infinity, maxHeight: 140, alignment: .center)
+                    .background(
+                        Image("subsNavigationBackground")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: .infinity, height: 140)
+                            .opacity(0.95) // Arka planın opaklığını ayarlar
+                    )
+                    .cornerRadius(15)
+                    .shadow(
+                        color: Color(red: 0.87, green: 0.87, blue: 0.87, opacity: 0.25),
+                        radius: 10
+                    )
+                    .padding(.horizontal, 25)
 
+
+                   
                 
                 HorizontalScrollView()
                 // AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2934735716").frame(height: 50)
@@ -117,7 +141,14 @@ struct MainView: View {
 } // ends of MainView
 
 
-
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+            //.environmentObject(navigationController)
+            .preferredColorScheme(.light)
+            
+    }
+}
 
 
 
