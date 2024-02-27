@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FE4819612B84F43D00687C84 /* Dietitian_Calorie_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4819602B84F43D00687C84 /* Dietitian_Calorie_CounterApp.swift */; };
-		FE4819632B84F43D00687C84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4819622B84F43D00687C84 /* ContentView.swift */; };
 		FE4819652B84F44000687C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4819642B84F44000687C84 /* Assets.xcassets */; };
 		FE4819682B84F44000687C84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4819672B84F44000687C84 /* Preview Assets.xcassets */; };
 		FE48196F2B84F5C800687C84 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE48196E2B84F5C800687C84 /* NavigationController.swift */; };
@@ -32,7 +31,6 @@
 		FE481CB42B84FD3000687C84 /* CircleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAA2B84FD2E00687C84 /* CircleBackground.swift */; };
 		FE481CB52B84FD3000687C84 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAB2B84FD2F00687C84 /* HorizontalScrollView.swift */; };
 		FE481CB62B84FD3000687C84 /* PhotoEditorRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAC2B84FD2F00687C84 /* PhotoEditorRectangle.swift */; };
-		FE481CB72B84FD3000687C84 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAD2B84FD2F00687C84 /* PhotoPickerView.swift */; };
 		FE481CB82B84FD3000687C84 /* AnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAE2B84FD2F00687C84 /* AnimatedBackground.swift */; };
 		FE481CB92B84FD3000687C84 /* SubscriptionNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CAF2B84FD2F00687C84 /* SubscriptionNavigationButton.swift */; };
 		FE481CBA2B84FD3000687C84 /* StaticBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CB02B84FD2F00687C84 /* StaticBackground.swift */; };
@@ -57,13 +55,21 @@
 		FE481CF42B8501D600687C84 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CF32B8501D600687C84 /* CustomButtons.swift */; };
 		FE481CF62B85031700687C84 /* AICutColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE481CF52B85031700687C84 /* AICutColors.swift */; };
 		FE481CFC2B85112300687C84 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE481CFB2B85112300687C84 /* info.plist */; };
+		FEC8FC922B8D152800111359 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FC8E2B8D152700111359 /* ListView.swift */; };
+		FEC8FC942B8D152800111359 /* FoodDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FC902B8D152700111359 /* FoodDetailedView.swift */; };
+		FEC8FC952B8D152800111359 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FC912B8D152800111359 /* SearchBar.swift */; };
+		FEC8FC972B8D157800111359 /* DailyIntakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FC962B8D157800111359 /* DailyIntakeData.swift */; };
+		FEC8FC9A2B8D15BC00111359 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FC992B8D15BC00111359 /* Model.swift */; };
+		FEC8FC9C2B8D15C600111359 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FC9B2B8D15C600111359 /* NetworkManager.swift */; };
+		FEC8FC9E2B8D15DD00111359 /* NutritionalLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FC9D2B8D15DD00111359 /* NutritionalLabelView.swift */; };
+		FEC8FCA02B8D169500111359 /* ScreenBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FC9F2B8D169400111359 /* ScreenBounds.swift */; };
+		FEC8FCA22B8D177900111359 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8FCA12B8D177900111359 /* ImageLoader.swift */; };
 		FEDD51432B88C1AE00338BB1 /* DailyOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD51422B88C1AE00338BB1 /* DailyOverviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE48195D2B84F43D00687C84 /* Dietitian Calorie Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dietitian Calorie Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4819602B84F43D00687C84 /* Dietitian_Calorie_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dietitian_Calorie_CounterApp.swift; sourceTree = "<group>"; };
-		FE4819622B84F43D00687C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE4819642B84F44000687C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE4819672B84F44000687C84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE48196E2B84F5C800687C84 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -90,7 +96,6 @@
 		FE481CAA2B84FD2E00687C84 /* CircleBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBackground.swift; sourceTree = "<group>"; };
 		FE481CAB2B84FD2F00687C84 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
 		FE481CAC2B84FD2F00687C84 /* PhotoEditorRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEditorRectangle.swift; sourceTree = "<group>"; };
-		FE481CAD2B84FD2F00687C84 /* PhotoPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		FE481CAE2B84FD2F00687C84 /* AnimatedBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedBackground.swift; sourceTree = "<group>"; };
 		FE481CAF2B84FD2F00687C84 /* SubscriptionNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionNavigationButton.swift; sourceTree = "<group>"; };
 		FE481CB02B84FD2F00687C84 /* StaticBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticBackground.swift; sourceTree = "<group>"; };
@@ -114,6 +119,15 @@
 		FE481CF32B8501D600687C84 /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		FE481CF52B85031700687C84 /* AICutColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AICutColors.swift; sourceTree = "<group>"; };
 		FE481CFB2B85112300687C84 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		FEC8FC8E2B8D152700111359 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		FEC8FC902B8D152700111359 /* FoodDetailedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailedView.swift; sourceTree = "<group>"; };
+		FEC8FC912B8D152800111359 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		FEC8FC962B8D157800111359 /* DailyIntakeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyIntakeData.swift; sourceTree = "<group>"; };
+		FEC8FC992B8D15BC00111359 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FEC8FC9B2B8D15C600111359 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FEC8FC9D2B8D15DD00111359 /* NutritionalLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionalLabelView.swift; sourceTree = "<group>"; };
+		FEC8FC9F2B8D169400111359 /* ScreenBounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBounds.swift; sourceTree = "<group>"; };
+		FEC8FCA12B8D177900111359 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		FEDD51422B88C1AE00338BB1 /* DailyOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyOverviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,17 +162,15 @@
 		FE48195F2B84F43D00687C84 /* Dietitian Calorie Counter */ = {
 			isa = PBXGroup;
 			children = (
-				FE481CF32B8501D600687C84 /* CustomButtons.swift */,
-				FE481CFB2B85112300687C84 /* info.plist */,
-				FE481C8B2B84FBBD00687C84 /* Files */,
-				FE481C842B84FB6F00687C84 /* Localization */,
+				FEC8FC982B8D15B200111359 /* Network */,
+				FEC8FC8D2B8D151100111359 /* Search */,
+				FEC8FC8C2B8D141100111359 /* UI */,
 				FE481C7C2B84FA5D00687C84 /* Modules */,
-				FE48196E2B84F5C800687C84 /* NavigationController.swift */,
+				FE481CFB2B85112300687C84 /* info.plist */,
 				FE4819602B84F43D00687C84 /* Dietitian_Calorie_CounterApp.swift */,
-				FE4819622B84F43D00687C84 /* ContentView.swift */,
 				FE4819642B84F44000687C84 /* Assets.xcassets */,
+				FE481C8B2B84FBBD00687C84 /* Files */,
 				FE4819662B84F44000687C84 /* Preview Content */,
-				FEDD51422B88C1AE00338BB1 /* DailyOverviewView.swift */,
 			);
 			path = "Dietitian Calorie Counter";
 			sourceTree = "<group>";
@@ -200,11 +212,14 @@
 				FE481C892B84FBA800687C84 /* Localizable.strings */,
 			);
 			name = Localization;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FE481C8B2B84FBBD00687C84 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE481C842B84FB6F00687C84 /* Localization */,
+				FE48196E2B84F5C800687C84 /* NavigationController.swift */,
 				FE481C922B84FBEA00687C84 /* Fonts */,
 				FE481C8C2B84FBD100687C84 /* LottieView.swift */,
 				FE481C8E2B84FBD800687C84 /* coin-lottie.json */,
@@ -249,7 +264,6 @@
 				FE481CAB2B84FD2F00687C84 /* HorizontalScrollView.swift */,
 				FE481CB22B84FD3000687C84 /* NavigationLazyView.swift */,
 				FE481CAC2B84FD2F00687C84 /* PhotoEditorRectangle.swift */,
-				FE481CAD2B84FD2F00687C84 /* PhotoPickerView.swift */,
 				FE481CB02B84FD2F00687C84 /* StaticBackground.swift */,
 				FE481CAF2B84FD2F00687C84 /* SubscriptionNavigationButton.swift */,
 				FE481CB12B84FD3000687C84 /* TitleView.swift */,
@@ -307,6 +321,38 @@
 				FE481CDD2B84FDF900687C84 /* TabBarButton.swift */,
 			);
 			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		FEC8FC8C2B8D141100111359 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FE481CF32B8501D600687C84 /* CustomButtons.swift */,
+				FEDD51422B88C1AE00338BB1 /* DailyOverviewView.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FEC8FC8D2B8D151100111359 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				FEC8FCA12B8D177900111359 /* ImageLoader.swift */,
+				FEC8FC902B8D152700111359 /* FoodDetailedView.swift */,
+				FEC8FC9D2B8D15DD00111359 /* NutritionalLabelView.swift */,
+				FEC8FC8E2B8D152700111359 /* ListView.swift */,
+				FEC8FC912B8D152800111359 /* SearchBar.swift */,
+				FEC8FC962B8D157800111359 /* DailyIntakeData.swift */,
+				FEC8FC9F2B8D169400111359 /* ScreenBounds.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		FEC8FC982B8D15B200111359 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FEC8FC992B8D15BC00111359 /* Model.swift */,
+				FEC8FC9B2B8D15C600111359 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,26 +447,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC8FC9C2B8D15C600111359 /* NetworkManager.swift in Sources */,
+				FEC8FC9A2B8D15BC00111359 /* Model.swift in Sources */,
 				FE481CC82B84FDCA00687C84 /* FAQItem.swift in Sources */,
 				FE481CD62B84FDD600687C84 /* AboutView.swift in Sources */,
 				FE481C9F2B84FC0400687C84 /* FontManager.swift in Sources */,
 				FE481CD22B84FDD600687C84 /* CustomToggleStyle.swift in Sources */,
 				FE481CA22B84FC3200687C84 /* Colors.swift in Sources */,
 				FE481C862B84FB9E00687C84 /* LocalizationService.swift in Sources */,
-				FE4819632B84F43D00687C84 /* ContentView.swift in Sources */,
+				FEC8FC942B8D152800111359 /* FoodDetailedView.swift in Sources */,
 				FE481CF62B85031700687C84 /* AICutColors.swift in Sources */,
 				FE481C8D2B84FBD100687C84 /* LottieView.swift in Sources */,
 				FE481CBA2B84FD3000687C84 /* StaticBackground.swift in Sources */,
 				FE481CB42B84FD3000687C84 /* CircleBackground.swift in Sources */,
+				FEC8FC9E2B8D15DD00111359 /* NutritionalLabelView.swift in Sources */,
 				FE48196F2B84F5C800687C84 /* NavigationController.swift in Sources */,
 				FE4819612B84F43D00687C84 /* Dietitian_Calorie_CounterApp.swift in Sources */,
 				FE481CB32B84FD3000687C84 /* AICutRectangle.swift in Sources */,
 				FE481CD32B84FDD600687C84 /* MenuContent.swift in Sources */,
 				FE481CD42B84FDD600687C84 /* LanguageView.swift in Sources */,
 				FE481CD52B84FDD600687C84 /* EmailHelper.swift in Sources */,
+				FEC8FCA22B8D177900111359 /* ImageLoader.swift in Sources */,
 				FE481CE02B84FDF900687C84 /* TabBarButton.swift in Sources */,
 				FE481CDE2B84FDF900687C84 /* CustomTabBar.swift in Sources */,
 				FE481CA32B84FC3200687C84 /* Color+Extension.swift in Sources */,
+				FEC8FCA02B8D169500111359 /* ScreenBounds.swift in Sources */,
 				FE481CB82B84FD3000687C84 /* AnimatedBackground.swift in Sources */,
 				FE481CB52B84FD3000687C84 /* HorizontalScrollView.swift in Sources */,
 				FE481CB62B84FD3000687C84 /* PhotoEditorRectangle.swift in Sources */,
@@ -434,11 +485,13 @@
 				FE481CD92B84FDD600687C84 /* SideMenu.swift in Sources */,
 				FE481CF42B8501D600687C84 /* CustomButtons.swift in Sources */,
 				FE481CC92B84FDCA00687C84 /* MenuItem.swift in Sources */,
+				FEC8FC922B8D152800111359 /* ListView.swift in Sources */,
 				FE481CBB2B84FD3000687C84 /* TitleView.swift in Sources */,
 				FE481CBF2B84FD3A00687C84 /* MainView.swift in Sources */,
 				FE481CD72B84FDD600687C84 /* FAQView.swift in Sources */,
 				FE481C7F2B84FA7F00687C84 /* OnboardingContentView.swift in Sources */,
-				FE481CB72B84FD3000687C84 /* PhotoPickerView.swift in Sources */,
+				FEC8FC952B8D152800111359 /* SearchBar.swift in Sources */,
+				FEC8FC972B8D157800111359 /* DailyIntakeData.swift in Sources */,
 				FE481C882B84FBA300687C84 /* String+Localization.swift in Sources */,
 				FE481CC02B84FD3A00687C84 /* MainViewModel.swift in Sources */,
 			);

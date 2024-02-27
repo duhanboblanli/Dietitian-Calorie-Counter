@@ -7,7 +7,6 @@
 import SwiftUI
 import PhotosUI
 
-
 struct MainView: View {
     
     // View Models
@@ -19,6 +18,21 @@ struct MainView: View {
     @State var menuOpened = false
     @State private var cur_tag = 0
     
+    @AppStorage("totalCalorie") var totalCalorie = 0.0
+    @AppStorage("totalCarbs") var totalCarbs = 0.0
+    @AppStorage("totalProtein") var totalProtein = 0.0
+    @AppStorage("totalFat") var totalFat = 0.0
+    @AppStorage("burnedInt") var burnedInt = 420
+    @AppStorage("goalInt") var goalInt = 2000.0
+    @State private var totalCalorie1: Double = 0
+    @State private var burnedInt1: Int = 0
+    @State private var goalInt1: Double = 0
+    @State private var goalRatio: Double = 0
+    @State private var totalCarbs1: Double = 0
+    @State private var totalProtein1: Double = 0
+    @State private var totalFat1: Double = 0
+
+
     init() {
         UITabBar.appearance().isHidden = true
     }
@@ -89,20 +103,14 @@ struct MainView: View {
                     .padding(.top,20)
                     .padding(.horizontal, 25)
                     .padding(.bottom, 20)
-                
-                let intake = Binding<Double>.constant(1500)
-                let caloriesBurned = Binding<Int>.constant(500)
-                let goalSetToday = Binding<Double>.constant(2000)
-                let ratio = ((1500.0 - 500.0) / 2000.0) * 100.0
-                let goalRatio = Binding<Double>.constant(ratio)
-                
-                DailyOverView(intake: intake, caloriesBurned: caloriesBurned, goalSetToday: goalSetToday, goalRatio: goalRatio)
+                                
+                DailyOverView(intake: $totalCalorie1, caloriesBurned: $burnedInt1, goalSetToday: $goalInt1, goalRatio: $goalRatio, carbsIntake: $totalCarbs1,proteinIntake: $totalProtein1,fatIntake: $totalFat1)
                     .frame(maxWidth: .infinity, maxHeight: 140, alignment: .center)
                     .background(
                         Image("subsNavigationBackground")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: .infinity, height: 140)
+                            //.frame(width: .infinity, height: 140)
                             .opacity(0.95) // Arka planın opaklığını ayarlar
                     )
                     .cornerRadius(15)
@@ -112,11 +120,9 @@ struct MainView: View {
                     )
                     .padding(.horizontal, 25)
 
-
-                   
                 
                 HorizontalScrollView()
-                // AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2934735716").frame(height: 50)
+             
             } // ends of VStack
             .navigationBarBackButtonHidden(true)
             .navigationBarTitleDisplayMode(.inline)
@@ -130,6 +136,13 @@ struct MainView: View {
         .edgesIgnoringSafeArea(.all)
         .onAppear {
                         
+            totalCalorie1 = totalCalorie
+            burnedInt1 = burnedInt
+            goalInt1 = goalInt
+            goalRatio = ((totalCalorie - Double(burnedInt)) / goalInt) * 100.0
+            totalFat1 = totalFat
+            totalCarbs1 = totalCarbs
+            totalProtein1 = totalProtein
             
         }
         

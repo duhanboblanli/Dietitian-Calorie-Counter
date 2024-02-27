@@ -26,13 +26,11 @@ struct Dietitian_Calorie_CounterApp: App {
     var body: some Scene {
         WindowGroup {
             
-            /*
-            PhotoEditView(image: UIImage(named: "png-example")!)
-                .environmentObject(PECtl.shared)
-                .environmentObject(PhotoEditorData.shared)
-                .preferredColorScheme(.dark)
-           */
+            
+           
+           
         
+            
             
          NavigationStack(path: $navigationController.path){
                 MainView()
@@ -55,10 +53,11 @@ struct Dietitian_Calorie_CounterApp: App {
                                 .environmentObject(navigationController)
                                 //.environmentObject(aiCutViewModel)
                                 .preferredColorScheme(isOn ? .dark : .light)
-                            
-                            
+                               
                         case .aicut:
-                            HomeView()
+                            ListView()
+                                .preferredColorScheme(isOn ? .dark : .light)
+
                         case .settings:
                             SettingsView(selectedMenuItem: "settings-string".localized(LocalizationService.shared.language))
                                 .environmentObject(navigationController)

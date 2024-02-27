@@ -5,14 +5,6 @@
 //  Created by Duhan Boblanlı on 23.02.2024.
 //
 
-//
-//  DailyOverviewView.swift
-//  CalTrack
-//
-//  Created by Jalp on 13/03/2020.
-//  Copyright © 2020 jdc0rp. All rights reserved.
-//
-
 import Foundation
 import SwiftUI
 
@@ -136,6 +128,9 @@ struct DailyOverView : View {
     @Binding var caloriesBurned: Int
     @Binding var goalSetToday: Double
     @Binding var goalRatio : Double
+    @Binding var carbsIntake : Double
+    @Binding var proteinIntake : Double
+    @Binding var fatIntake : Double
     @Environment(\.colorScheme) var colorScheme
 
     
@@ -151,15 +146,23 @@ struct DailyOverView : View {
                         endPoint: .bottomTrailing
                     )
                     .mask(Text("Eaten :")
-                        .font(.custom(FontsManager.Poppins.bold, size: 19))
+                        .font(.custom(FontsManager.Poppins.bold, size: 18))
                         .multilineTextAlignment(.leading)
                     )
-                    Spacer().frame(width: 0)
-                    Text("\(String(format: "%.0f", self.intake)) kCAL")
+                    .frame(maxWidth: 80, alignment: .leading) // Texti sola daya
+                    .padding(.leading,1)
+
+                    Spacer().frame(width: 3)
+
+                    
+                    Text("\(String(format: "%.0f", self.intake)) kcal")
                         .font(.custom(FontsManager.Poppins.medium, size: 18 ))
                         .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
                         .lineLimit(1)
+                        .frame(maxWidth: 90, alignment: .leading) // Texti sola daya
                 }
+                .padding(.leading,0)
+
                 Spacer().frame(height: 0)
                 
                 HStack {
@@ -170,14 +173,19 @@ struct DailyOverView : View {
                         endPoint: .bottomTrailing
                     )
                     .mask(Text("Burned :")
-                        .font(.custom(FontsManager.Poppins.bold, size: 19))
+                        .font(.custom(FontsManager.Poppins.bold, size: 18))
                         .multilineTextAlignment(.leading)
                     )
+                    .frame(maxWidth: 80, alignment: .leading) // Texti sola daya
+                    .padding(.leading,6)
+
                     Spacer().frame(width: 0)
-                    Text("\(String(format: "%.0f", Double(self.caloriesBurned))) kCAL")
+                    
+                    Text("\(String(format: "%.0f", Double(self.caloriesBurned))) kcal")
                         .font(.custom(FontsManager.Poppins.medium, size: 18 ))
                         .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
                         .lineLimit(1)
+                        .frame(maxWidth: 90, alignment: .leading) // Texti sola daya
                 }
                 Spacer().frame(height: 0)
 
@@ -189,17 +197,27 @@ struct DailyOverView : View {
                         endPoint: .bottomTrailing
                     )
                     .mask(Text("Goal :")
-                        .font(.custom(FontsManager.Poppins.bold, size: 19))
+                        .font(.custom(FontsManager.Poppins.bold, size: 18))
                         .multilineTextAlignment(.leading)
                     )
-                    Spacer().frame(width: 0)
-                    Text("\(String(format: "%.0f", Double(self.goalSetToday))) kCAL")
+                    .frame(maxWidth: 80, alignment: .leading) // Texti sola daya
+                    .padding(.leading,-1)
+
+                    //Spacer().frame(width: 6)
+                    Spacer().frame(width: 4)
+
+                    Text("\(String(format: "%.0f", Double(self.goalSetToday))) kcal")
                         .font(.custom(FontsManager.Poppins.medium, size: 18 ))
                         .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
                         .lineLimit(1)
+                        .frame(maxWidth: 90, alignment: .leading) // Texti sola daya
+                        
+
                 }
+                
                 Spacer()
             }
+            .padding(.leading,4)
             Spacer().frame(width: 30)
             ZStack {
                 Text("\(String(format: "%.2f", self.goalRatio))%")
@@ -211,24 +229,153 @@ struct DailyOverView : View {
                     .aspectRatio(contentMode: .fit)
             }
         }
+        let totalCalories = self.goalSetToday // Toplam günlük kalori alımı
+
+        // Önerilen yüzdelik oranlar
+        let carbPercentage = 0.50 // %50
+        let proteinPercentage = 0.25 // %25
+        let fatPercentage = 0.25 // %25
+
+        // Günlük karbonhidrat, protein ve yağ ihtiyaçlarını hesaplayın
+        let carbCalories = Double(totalCalories) * carbPercentage
+        let proteinCalories = Double(totalCalories) * proteinPercentage
+        let fatCalories = Double(totalCalories) * fatPercentage
+
+        // Kalori başına gram cinsinden karbonhidrat, protein ve yağ değerlerini belirtin
+        let carbCaloriesPerGram = 4.0 // 1 gram karbonhidrat = 4 kcal
+        let proteinCaloriesPerGram = 4.0 // 1 gram protein = 4 kcal
+        let fatCaloriesPerGram = 9.0 // 1 gram yağ = 9 kcal
+
+        // Günlük karbonhidrat, protein ve yağ ihtiyacını gram cinsinden hesaplayın
+        let carbGrams = carbCalories / carbCaloriesPerGram
+        let proteinGrams = proteinCalories / proteinCaloriesPerGram
+        let fatGrams = fatCalories / fatCaloriesPerGram
+        
+        HStack {
+            // Başlık: Carbs
+           
+            VStack {
+                Spacer()
+                
+                Text("Carbs")
+                    .font(.custom(FontsManager.Poppins.bold, size: 17))
+                    .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
+                
+                Spacer().frame(height: 10)
+                
+                CustomLinearProgressBar(value: carbsIntake, total: carbGrams, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
+                    .frame(height: 5)
+                    
+                    
+                Spacer().frame(height: 10)
+                
+                Text("\(String(format: "%.1f", carbsIntake)) / \(Int(carbGrams))g")
+                    .font(.custom(FontsManager.Poppins.bold, size: 14))
+                    .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
+                
+                Spacer()
+            }
+            .padding(.leading,10)
+            .padding(.trailing, 10)
+            
+            // Başlık: Protein
+            VStack {
+                Text("Protein")
+                    .font(.custom(FontsManager.Poppins.bold, size: 17))
+                    .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
+           
+                
+                Spacer().frame(height: 10)
+                
+                CustomLinearProgressBar(value: proteinIntake, total: proteinGrams, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
+                    .frame(height: 5)
+                    
+                    
+                Spacer().frame(height: 10)
+                Text("\(String(format: "%.1f", proteinIntake)) / \(Int(proteinGrams))g")
+
+                    .font(.custom(FontsManager.Poppins.bold, size: 14))
+                    .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
+            }
+            .padding(.trailing, 10)
+            
+            // Başlık: Fat
+            VStack {
+                Text("Fat")
+                    .font(.custom(FontsManager.Poppins.bold, size: 17))
+                    .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
+               
+                
+                Spacer().frame(height: 10)
+                
+                CustomLinearProgressBar(value: fatIntake, total: fatGrams, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
+                    .frame(height: 5)
+                    
+                    
+                Spacer().frame(height: 10)
+                
+                
+                Text("\(String(format: "%.1f", fatIntake)) / \(Int(fatGrams))g")
+                    .font(.custom(FontsManager.Poppins.bold, size: 14))
+                    .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
+            }
+            .padding(.trailing, 10)
+            
+        }
+       
+      
+       
     }
 }
 
 
 struct DailyOverView_Previews: PreviewProvider {
     static var previews: some View {
-        // Önizleyiciye bağlayıcıları geçirmek için sabit değerler oluşturuyoruz
-      /*  let intake = Binding<Double>.constant(1500)
-        let caloriesBurned = Binding<Int>.constant(500)
+        // Önizleyiciye bağlayıcıları geçirmek için sabit değerler 
+        /*oluşturuyoruz
+        let intake = Binding<Double>.constant(1500)
+        let caloriesBurned1 = Binding<Int>.constant(500)
+
+        let caloriesBurned = Binding<Double>.constant(200)
         let goalSetToday = Binding<Double>.constant(2000)
         let ratio = ((1500.0 - 500.0) / 2000.0) * 100.0
         let goalRatio = Binding<Double>.constant(ratio)
         
-        return DailyOverView(intake: intake, caloriesBurned: caloriesBurned, goalSetToday: goalSetToday, goalRatio: goalRatio) */
-        
+        return DailyOverView(intake: intake, caloriesBurned: caloriesBurned1, goalSetToday: goalSetToday, goalRatio: goalRatio,carbsIntake: caloriesBurned,proteinIntake: caloriesBurned,fatIntake: caloriesBurned)
+        */
         MainView()
             //.environmentObject(navigationController)
             .preferredColorScheme(.light)
     }
 }
 
+struct CustomLinearProgressBar: View {
+    var value: Double // Mevcut değer
+    var total: Double // Toplam değer
+    var barWidth: CGFloat // Çubuğun genişliği
+    var barHeight: CGFloat // Çubuğun yüksekliği
+    var gradientColors: [Color] // Lineer gradyan renkleri
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: barHeight / 2)
+                    .frame(width: geometry.size.width, height: barHeight)
+                    .foregroundColor(Color.gray.opacity(0.5)) // Arka plan rengi
+                
+                RoundedRectangle(cornerRadius: barHeight / 2)
+                    .frame(width: min(self.progressBarWidth(geometryWidth: geometry.size.width), geometry.size.width), height: barHeight)
+                    .foregroundColor(.clear)
+                    .background(LinearGradient(gradient: Gradient(colors: gradientColors), startPoint: .leading, endPoint: .trailing))
+                    .clipShape(RoundedRectangle(cornerRadius: barHeight / 2))
+            }
+            .frame(height: barHeight)
+        }
+    }
+    
+    // İlerleme çubuğunun genişliğini hesapla
+    private func progressBarWidth(geometryWidth: CGFloat) -> CGFloat {
+        let percent = min(max(0, CGFloat(value / total)), 1)
+        return percent * geometryWidth
+    }
+}

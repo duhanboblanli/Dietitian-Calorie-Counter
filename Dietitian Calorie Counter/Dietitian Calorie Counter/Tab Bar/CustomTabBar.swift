@@ -39,50 +39,33 @@ struct CustomTabBar : View {
         @State var selectedItem: PhotosPickerItem? = nil
         
         var body: some View{
-            PhotosPicker(
-                    selection: $selectedItem,
-                    matching: .images,
-                    photoLibrary: .shared()
-                ){
-                        TabBarButton(value: value)
-                        .background{
-                            GeometryReader{reader in
-                                Color.clear
-                                    .onAppear{
-                                        if(value == tabItems[1]){
-                                            let frame = reader.frame(in: .global)
-                                            centerY.wrappedValue = frame.minY + frame.height / 2 - 12
-                                        }
-                                    }
+            
+            TabBarButton(value: value) {
+                navController.path.append(.aicut)
+                
+            }
+            .background{
+                GeometryReader{reader in
+                    Color.clear
+                        .onAppear{
+                            if(value == tabItems[1]){
+                                let frame = reader.frame(in: .global)
+                                centerY.wrappedValue = frame.minY + frame.height / 2 - 12
                             }
                         }
                 }
-                .onChange(of: selectedItem) { newItem in
-                    Task{
-                        let (image, url) = await viewModel.photosPickerTask(newItem: newItem)
-                        if let image = image, let url = url{
-                            print("PICKER: \(image) \(url)")
-
-                            navController.preAICut(image: image, imageURL: url)
-
-                            
-                            DispatchQueue.main.async {
-                                navController.path.append(.aicut)
-                            }
-                        }
-                    }
-                }
-                .onAppear{
-                    selectedItem = nil
-                }
-                if value != tabItems.last{
-                    Spacer(minLength: 0)
-                }
+            }
+            .onAppear{
+                selectedItem = nil
+            }
+            if value != tabItems.last{
+                Spacer(minLength: 0)
+            }
         }
         
     }
     
-
+    
 }
 
 
