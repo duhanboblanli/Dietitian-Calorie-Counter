@@ -8,9 +8,9 @@
 import SwiftUI
 
 private let onBoardingSteps = [
-    OnBoardingStep(title: "onboarding-page1-title-string".localized(LocalizationService.shared.language), description: "onboarding-page1-description-string".localized(LocalizationService.shared.language)),
-    OnBoardingStep(title: "onboarding-page2-title-string".localized(LocalizationService.shared.language), description: "onboarding-page2-description-string".localized(LocalizationService.shared.language)),
-    OnBoardingStep(title: "onboarding-page3-title-string".localized(LocalizationService.shared.language), description: "onboarding-page3-description-string".localized(LocalizationService.shared.language))
+    OnBoardingStep(title: "Food Tracker: Nutrition, Calories, and Beyond".localized(LocalizationService.shared.language), description: "Communication with your dietitian while tracking your daily food intake.".localized(LocalizationService.shared.language)),
+    OnBoardingStep(title: "Food Search and Detailed Food Nutrition".localized(LocalizationService.shared.language), description: "Access over 300,000 foods, search for nutrients, and add them to your daily tracker. Easily access nutritional contents of foods.".localized(LocalizationService.shared.language)),
+    OnBoardingStep(title: "Stay in Touch with Your Dietitian 24/7".localized(LocalizationService.shared.language), description: "Your dietitian can track your food intake, communicate with you about them and also provide you with your daily meal plan.".localized(LocalizationService.shared.language))
 ]
 
 // Gif Image
@@ -120,7 +120,7 @@ struct OnboardingContentView: View {
                 }
                 
                 // Gif Image
-                LottieView(name: "onboarding-lottie.json")
+                LottieView(name: "new.json")
                     .cornerRadius(calculateCornerRadius())
                     .frame(maxWidth: calculateMaxWidth())
                     .frame(maxHeight: calculateMaxHeight())
