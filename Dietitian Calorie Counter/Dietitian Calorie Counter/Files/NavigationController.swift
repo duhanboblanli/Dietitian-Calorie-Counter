@@ -11,6 +11,7 @@ enum NavigationScreen: Hashable{
     case FAQs
     case about
     case language
+    case main
 
 }
 

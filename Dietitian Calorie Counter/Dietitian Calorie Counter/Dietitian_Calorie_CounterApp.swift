@@ -19,18 +19,15 @@ struct Dietitian_Calorie_CounterApp: App {
         print("isOnboarding:",isOnboarding)
         if isOnboarding {
             navigationController.path.append(NavigationScreen.onboarding)
+        } else {
+            navigationController.path.append(NavigationScreen.subscription)
         }
+
     }
     
     
     var body: some Scene {
         WindowGroup {
-            
-            
-           
-           
-        
-            
             
          NavigationStack(path: $navigationController.path){
                 MainView()
@@ -49,7 +46,8 @@ struct Dietitian_Calorie_CounterApp: App {
                                 }
                             
                         case .subscription:
-                            MainView()
+                            LoginRegisterView(confirmationPassword: "")
+                                .navigationBarHidden(true)
                                 .environmentObject(navigationController)
                                 //.environmentObject(aiCutViewModel)
                                 .preferredColorScheme(isOn ? .dark : .light)
@@ -70,6 +68,12 @@ struct Dietitian_Calorie_CounterApp: App {
                         case .language:
                             LanguageView()
                                 .environmentObject(navigationController)
+                        case .main:
+                            MainView()
+                                .environmentObject(navigationController)
+                                //.environmentObject(aiCutViewModel)
+                                .preferredColorScheme(isOn ? .dark : .light)
+
                         } // ends of switch-case
                     }
             } // ends of NStack

@@ -22,7 +22,7 @@ struct MainView: View {
     @AppStorage("totalCarbs") var totalCarbs = 0.0
     @AppStorage("totalProtein") var totalProtein = 0.0
     @AppStorage("totalFat") var totalFat = 0.0
-    @AppStorage("burnedInt") var burnedInt = 420
+    @AppStorage("burnedInt") var burnedInt = 0
     @AppStorage("goalInt") var goalInt = 2000.0
     @State private var totalCalorie1: Double = 0
     @State private var burnedInt1: Int = 0
