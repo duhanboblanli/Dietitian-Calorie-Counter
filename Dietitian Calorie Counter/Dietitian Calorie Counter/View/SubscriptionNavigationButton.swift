@@ -15,6 +15,7 @@ struct SubscriptionNavigationButton: View {
     @AppStorage("language") private var language = LocalizationService.shared.language
     @AppStorage("remainingCoin") var remainingCoin: Int = 0
     @AppStorage("selectedPlan") private var selectedPlan = ""
+    var imageUrl = URL(string: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8")
     
     // Set text size with poppins font
     
@@ -27,7 +28,7 @@ struct SubscriptionNavigationButton: View {
         GeometryReader { geometry in
             
             Button(action: {
-                navController.path.append(.subscription)
+                navController.path.append(.chat)
             }) {
                 ZStack {
                     Rectangle()
@@ -47,12 +48,25 @@ struct SubscriptionNavigationButton: View {
                     
                     HStack {
                         
+                        AsyncImage(url: imageUrl) { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 40, height: 40)
+                                .cornerRadius(50)
+                                .padding(.top, 10)
+                                .padding(.bottom, 45)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        
+                        /*
                         Image("Diyetisyen")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 40, height: 40)
                             .padding(.top, 10)
                             .padding(.bottom, 45)
+                         */
                         
                         Spacer().frame(width: 16)
                         

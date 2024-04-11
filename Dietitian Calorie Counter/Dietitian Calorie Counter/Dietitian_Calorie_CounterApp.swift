@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 @main
 struct Dietitian_Calorie_CounterApp: App {
@@ -16,6 +18,8 @@ struct Dietitian_Calorie_CounterApp: App {
     @ObservedObject var navigationController = NavigationController.shared
     
     init() {
+        FirebaseApp.configure()
+
         print("isOnboarding:",isOnboarding)
         if isOnboarding {
             navigationController.path.append(NavigationScreen.onboarding)
@@ -74,6 +78,8 @@ struct Dietitian_Calorie_CounterApp: App {
                                 //.environmentObject(aiCutViewModel)
                                 .preferredColorScheme(isOn ? .dark : .light)
 
+                        case .chat:
+                            ChatView()
                         } // ends of switch-case
                     }
             } // ends of NStack
