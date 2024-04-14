@@ -9,11 +9,13 @@ import Foundation
 
 class LoginViewModel: ObservableObject {
     
-    var username: String = ""
-    var password: String = ""
+    var username: String = "30630654611"
+    var password: String = "Password123"
     var firstName: String = ""
     var lastName: String = ""
-
+    var errorMessage: String = ""
+    
+    
     @Published var isAuthenticated: Bool = false
     
     func login() {
@@ -22,25 +24,55 @@ class LoginViewModel: ObservableObject {
         
         Webservice().login(username: username, password: password) { result in
             switch result {
-                case .success(let token):
-                    defaults.setValue(token, forKey: "jsonwebtoken")
+            case .success(let token):
+                defaults.setValue(token, forKey: "jsonwebtoken")
+                DispatchQueue.main.async {
+                    self.isAuthenticated = true
+                    
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func login2() {
+        
+        let defaults = UserDefaults.standard
+        
+        Webservice().login2(tckn: username, password: password) { result in
+            switch result {
+            case .success(let response):
+                defaults.setValue(response.accessToken, forKey: "jsonwebtoken")
+                
+                DispatchQueue.main.async {
+                    self.isAuthenticated = true
+                    self.errorMessage = response.message ?? "No Message"
+                    print("success errorMessage:",self.errorMessage)
+                }
+            case .failure(let error):
+                switch error {
+                case .custom(let errorMessage):
                     DispatchQueue.main.async {
-                        self.isAuthenticated = true
+                        self.errorMessage = errorMessage
+                        print("failure errorMessage:",self.errorMessage)
                     }
-                case .failure(let error):
-                    print(error.localizedDescription)
+                   // print("failure errorMessage:",self.errorMessage)
+                case .invalidCredentials:
+                    print("Invalid credentials") // Diğer hatalar için alternatif bir işlem yapabilirsiniz
+                }
             }
         }
     }
     
     func signout() {
-           
-           let defaults = UserDefaults.standard
-           defaults.removeObject(forKey: "jsonwebtoken")
-           DispatchQueue.main.async {
-               self.isAuthenticated = false
-           }
-           
-       }
+        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "jsonwebtoken")
+        DispatchQueue.main.async {
+            self.isAuthenticated = false
+        }
+        
+    }
     
 }

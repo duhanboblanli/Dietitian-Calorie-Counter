@@ -52,10 +52,10 @@ class NetworkManager : ObservableObject {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
-            print("Data is : \(data)")
+            
             
             let result = try? JSONDecoder().decode(Response.self, from: data)
-            print("RESULT is : \(result)")
+            
 
             DispatchQueue.main.async {
                 self.commonProducts = result!.common
@@ -92,10 +92,10 @@ class NetworkManager : ObservableObject {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
-            print("Data is : \(data)")
+            
             
             let result = try? JSONDecoder().decode(ItemResponse.self, from: data)
-            print("result detail:",result)
+           
             DispatchQueue.main.async {
                 self.foodDetail = result!.foods
             }
@@ -126,7 +126,7 @@ class NetworkManager : ObservableObject {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
-            print("Data is : \(data)")
+            
             
             let result = try? JSONDecoder().decode(ItemResponse.self, from: data)
             
@@ -159,7 +159,7 @@ class NetworkManager : ObservableObject {
             
             guard let data = data else { return }
             
-            print("Data is : \(data)")
+            
             
             let result = try? JSONDecoder().decode(ItemResponse.self, from: data)
             

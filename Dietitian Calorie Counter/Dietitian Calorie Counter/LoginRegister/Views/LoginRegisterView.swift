@@ -69,8 +69,8 @@ struct LoginRegisterView: View {
                             .padding(.leading)
                         
                         
+                        //TextField("Identity Number".uppercased(), text: $loginVM.username)
                         TextField("Identity Number".uppercased(), text: $loginVM.username)
-                           
                             //.keyboardType(.default)
                             //.font(.subheadline)
                             .padding(.leading)
@@ -89,7 +89,7 @@ struct LoginRegisterView: View {
                         
                         SecureField("Password".uppercased(), text: $loginVM.password) {
                             if !registerMode {
-                                loginVM.login()
+                                loginVM.login2()
                             }
                         }
                     
@@ -110,7 +110,8 @@ struct LoginRegisterView: View {
                                 .padding(.leading)
                             
                             SecureField("repeat password".uppercased(), text: $confirmationPassword) {
-                                loginVM.login()
+                                // Register
+                                loginVM.login2()
                             }
                            
                             .keyboardType(.default)
@@ -137,7 +138,8 @@ struct LoginRegisterView: View {
                             if loginVM.password == confirmationPassword {
                                 if (loginVM.password != "") && (confirmationPassword != "") {
                                     //register()
-                                    loginVM.login()
+                                    //loginVM.login2()
+                                    print("Register Clicked")
                                 } else {
                                     if loginVM.username != "" {
                                         print("Please enter a password")
@@ -188,10 +190,13 @@ struct LoginRegisterView: View {
                                     errorMessage = "Please enter a password"
                                }
                             } else {
-                                loginVM.login()
-                                    errorMessage = loginVM.isAuthenticated ? "" : "Login failed!"
+                                loginVM.login2()
+                                    //errorMessage = loginVM.isAuthenticated ? "" : "Login failed!"
+                                errorMessage = loginVM.errorMessage
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    errorMessage = loginVM.errorMessage
+
                                     if loginVM.isAuthenticated {
                                         //navController.path.removeAll()
                                         navController.path.append(NavigationScreen.main)
@@ -215,9 +220,15 @@ struct LoginRegisterView: View {
                 Spacer().frame(height: 20)
 
                 if !errorMessage.isEmpty {
-                    Text(loginVM.isAuthenticated ? "Login Succesful!" : errorMessage)
-                        .foregroundColor(loginVM.isAuthenticated ? .green : .red)
-                        .padding()
+                    if loginVM.isAuthenticated {
+                        Text("Login Succesful!")
+                            .foregroundColor(loginVM.isAuthenticated ? .green : .red)
+                            .padding()
+                    } else {
+                            Text(errorMessage)
+                                .foregroundColor(loginVM.isAuthenticated ? .green : .red)
+                                .padding()
+                    }
                 }
                 
                 Spacer().frame(height: 20)
