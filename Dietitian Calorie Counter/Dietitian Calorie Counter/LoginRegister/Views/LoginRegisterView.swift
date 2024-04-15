@@ -137,8 +137,20 @@ struct LoginRegisterView: View {
                         if registerMode {
                             if loginVM.password == confirmationPassword {
                                 if (loginVM.password != "") && (confirmationPassword != "") {
-                                    //register()
-                                    //loginVM.login2()
+                                    loginVM.register()
+                                    
+                                    errorMessage = loginVM.errorMessage
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                        errorMessage = loginVM.errorMessage
+                                        
+                                        /*
+                                        if loginVM.isAuthenticated {
+                                            //navController.path.removeAll()
+                                            //navController.path.append(NavigationScreen.main)
+                                        } */
+                                    }
+                                    
                                     print("Register Clicked")
                                 } else {
                                     if loginVM.username != "" {
@@ -220,7 +232,12 @@ struct LoginRegisterView: View {
                 Spacer().frame(height: 20)
 
                 if !errorMessage.isEmpty {
-                    if loginVM.isAuthenticated {
+                    
+                    Text(errorMessage)
+                        .foregroundColor(loginVM.isAuthenticated ? .green : .red)
+                        .padding()
+                    
+                    /*if loginVM.isAuthenticated {
                         Text("Login Succesful!")
                             .foregroundColor(loginVM.isAuthenticated ? .green : .red)
                             .padding()
@@ -228,7 +245,7 @@ struct LoginRegisterView: View {
                             Text(errorMessage)
                                 .foregroundColor(loginVM.isAuthenticated ? .green : .red)
                                 .padding()
-                    }
+                    } */
                 }
                 
                 Spacer().frame(height: 20)

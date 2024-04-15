@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct LoginView: View {
         
     @StateObject private var loginVM = LoginViewModel()
@@ -75,3 +75,5 @@ struct LoginView_Previews: PreviewProvider {
         LoginView()
     }
 }
+
+*/
