@@ -34,7 +34,7 @@ class LoginViewModel: ObservableObject {
                                                               totalProtein: 0.0,
                                                               intakeCarbohydrate: 0.0,
                                                               intakeFat: 0.0,
-                                                              intakeProtein: 0.0)
+                                                           intakeProtein: 0.0, intakeCal: 0.0)
 
     @Published var isAuthenticated: Bool = false
     
@@ -169,10 +169,10 @@ class LoginViewModel: ObservableObject {
                         }
                         
                         // intakeCalorie eklenecek
-                        /*if let intakeCalorie = self.diet.intakeCalorie {
+                        if let intakeCalorie = self.diet.intakeCal {
                             self.totalCalorie = intakeCalorie
                         }
-                        */
+                        
                     }
                 
                 case .failure(let error):
@@ -180,6 +180,25 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
+    
+    func putDiet(intakeCal:Double, intakeCarbohydrate:Double, intakeFat:Double, intakeProtein:Double  ) {
+        let defaults = UserDefaults.standard
+        guard let token = defaults.string(forKey: "jsonwebtoken") else {
+            return
+        }
+        
+        Webservice().putDiet(token: token, intakeCarbohydrate: intakeCarbohydrate, intakeFat: intakeFat, intakeProtein: intakeProtein, intakeCal: intakeCal) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                DispatchQueue.main.async {
+                    print("PUT DIET SUCCESFUL")
+                }
+            }
+        }
+    }
+
+    
     
     func signout() {
         

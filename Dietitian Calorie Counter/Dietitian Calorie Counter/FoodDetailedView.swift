@@ -50,11 +50,15 @@ struct FoodDetailedView: View {
             
             print("calorie: ",calorie,"carbs: ",carbs,"protein: ",protein,"fat: ",fat)
             
-            // Burada put işlemi yapılacak
+            DispatchQueue.main.async {
+                LoginViewModel().putDiet(intakeCal: calorie, intakeCarbohydrate: carbs, intakeFat: fat , intakeProtein: protein)
+            }
+
             totalCalorie += calorie
             totalCarbs += carbs
             totalProtein += protein
             totalFat += fat
+ 
             
             print("calorie: ",totalCalorie,"carbs: ",totalCarbs,"protein: ",totalProtein,"fat: ",totalFat)
 
@@ -64,25 +68,6 @@ struct FoodDetailedView: View {
             self.isShowingAlert = true
             self.dismissView = true
             
-            /*
-            // Track the food item
-            goal.addIntake(intake: intake, session: self.session, completion: {result in
-                if (result == .Error) {
-                    self.alertMsg = "Error"
-                    self.alertMsgBody = "Error tracking food. Please try again"
-                    self.isShowingAlert = true
-                } else if (result == .Success) {
-                    self.alertMsg = "Success"
-                    self.alertMsgBody = "Food has been tracked!"
-                    self.isShowingAlert = true
-                    self.dismissView = true
-                } else {
-                    self.alertMsg = "Unkown Error"
-                    self.alertMsgBody = "Please try again"
-                    self.isShowingAlert = true
-                }
-            })
-            */
         }
     }
     

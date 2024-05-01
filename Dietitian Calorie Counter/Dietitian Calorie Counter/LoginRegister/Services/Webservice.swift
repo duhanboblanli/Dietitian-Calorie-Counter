@@ -9,6 +9,7 @@ enum NetworkError: Error {
     case invalidURL
     case noData
     case decodingError
+    case encodingError
 }
 
 //MARK: - Register
@@ -38,8 +39,6 @@ struct LoginResponse2: Codable {
 }
 
 //MARK: - Get Diet
-
-// !!! intakeCalorie eklenecek !!!
 struct GetDietResponse: Codable {
     let totalCal: Double?
     let totalCarbohydrate: Double?
@@ -49,8 +48,16 @@ struct GetDietResponse: Codable {
     let intakeCarbohydrate: Double?
     let intakeFat: Double?
     let intakeProtein: Double?
+    let intakeCal: Double?
 }
 
+//MARK: - Put Diet
+struct PutDietRequest: Codable {
+    let intakeCarbohydrate: Double?
+    let intakeFat: Double?
+    let intakeProtein: Double?
+    let intakeCal: Double?
+}
 
 class Webservice {
     
@@ -130,9 +137,7 @@ class Webservice {
             completion(.failure(.custom(errorMessage: "URL is not correct")))
             return
         }
-        
-        
-        
+         
         //let body = LoginRequestBody2(tckn: "30630654611", password: "Password123")
         //let body = LoginRequestBody2(tckn: tckn, password: password)
         
@@ -173,6 +178,39 @@ class Webservice {
         }.resume()
     }
     
+    func putDiet(token: String, intakeCarbohydrate: Double, intakeFat: Double, intakeProtein: Double, intakeCal: Double, completion: @escaping (NetworkError?) -> Void) {
+        
+        guard let url = URL(string: "https://dieticianpatientapp.onrender.com/api/v1/diet") else {
+            completion(.invalidURL)
+            return
+        }
+        
+        let body = PutDietRequest(intakeCarbohydrate: intakeCarbohydrate, intakeFat: intakeFat, intakeProtein: intakeProtein, intakeCal: intakeCal)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        do {
+            request.httpBody = try JSONEncoder().encode(body)
+        } catch {
+            completion(.encodingError)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let _ = data, error == nil else {
+                completion(.noData)
+                return
+            }
+            
+            completion(nil)
+        }.resume()
+    }
+
+
     
     //MARK: - get diet
     func getDiet(token: String,patientId: String, completion: @escaping (Result<GetDietResponse, NetworkError>) -> Void) {

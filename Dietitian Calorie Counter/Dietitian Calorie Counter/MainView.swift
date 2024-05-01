@@ -102,9 +102,7 @@ struct MainView: View {
                     // Side Menu Button
                     if !menuOpened {
                         Button(action: {
-                            //self.menuOpened.toggle()
-                            //loginVM.getDiet()
-                            LoginViewModel().getDiet()
+                            self.menuOpened.toggle()
                         }, label: {
                             Image("sideMenuButton")
                                 .resizable()
@@ -158,7 +156,7 @@ struct MainView: View {
             @ObservedObject var loginVM = LoginViewModel()
             loginVM.getDiet()
             
-            // !!! intakeCalorie girilecek daha requeste eklenmedi !!!
+            // intake Calorie
             intakeCalorie = totalCalorie
             
             // intake fat, Carbs, Protein
