@@ -16,6 +16,8 @@ struct Dietitian_Calorie_CounterApp: App {
     @AppStorage("isOnboarding") var isOnboarding = true
     @AppStorage("language") private var language = LocalizationService.shared.language
     @ObservedObject var navigationController = NavigationController.shared
+    @ObservedObject var loginVM = LoginViewModel()
+
     
     init() {
         FirebaseApp.configure()
@@ -36,10 +38,11 @@ struct Dietitian_Calorie_CounterApp: App {
          NavigationStack(path: $navigationController.path){
                 MainView()
                     .environmentObject(navigationController)
-                    //.environmentObject(aiCutViewModel)
+                    .environmentObject(loginVM)
                     .preferredColorScheme(isOn ? .dark : .light)
-                    
+             
                     .navigationDestination(for: NavigationScreen.self){ screen in
+                        
                         switch screen{
                         case .onboarding:
                             OnboardingContentView()
@@ -53,7 +56,7 @@ struct Dietitian_Calorie_CounterApp: App {
                             LoginRegisterView(confirmationPassword: "")
                                 .navigationBarHidden(true)
                                 .environmentObject(navigationController)
-                                //.environmentObject(aiCutViewModel)
+                                .environmentObject(loginVM)
                                 .preferredColorScheme(isOn ? .dark : .light)
                                
                         case .aicut:

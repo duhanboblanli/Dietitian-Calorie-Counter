@@ -18,6 +18,8 @@ struct FoodDetailedView: View {
     @State var dismissView = false
     @State var alertMsg = ""
     @State var alertMsgBody = ""
+    
+    // intake
     @AppStorage("totalCalorie") var totalCalorie = 0.0
     @AppStorage("totalCarbs") var totalCarbs = 0.0
     @AppStorage("totalProtein") var totalProtein = 0.0
@@ -48,6 +50,7 @@ struct FoodDetailedView: View {
             
             print("calorie: ",calorie,"carbs: ",carbs,"protein: ",protein,"fat: ",fat)
             
+            // Burada put işlemi yapılacak
             totalCalorie += calorie
             totalCarbs += carbs
             totalProtein += protein

@@ -12,35 +12,52 @@ struct MainView: View {
     // View Models
     @StateObject var viewModel: MainViewModel = MainViewModel()
     @EnvironmentObject var navController: NavigationController
+    @EnvironmentObject var loginVM : LoginViewModel
     @AppStorage("isOnboarding") var isOnboarding = false
 
     @State var centerY: CGFloat = 0
     @State var menuOpened = false
     @State private var cur_tag = 0
     
+    // intake
     @AppStorage("totalCalorie") var totalCalorie = 0.0
     @AppStorage("totalCarbs") var totalCarbs = 0.0
     @AppStorage("totalProtein") var totalProtein = 0.0
     @AppStorage("totalFat") var totalFat = 0.0
-    @AppStorage("burnedInt") var burnedInt = 0
+    
+    // goal
     @AppStorage("goalInt") var goalInt = 2000.0
-    @State private var totalCalorie1: Double = 0
+    @AppStorage("goalCarbs") var goalCarbs = 0.0
+    @AppStorage("goalPro") var goalPro = 0.0
+    @AppStorage("goalFat") var goalFat = 0.0
+    
+    // local
+    @State private var intakeCalorie: Double = 0
     @State private var burnedInt1: Int = 0
     @State private var goalInt1: Double = 0
     @State private var goalRatio: Double = 0
     @State private var totalCarbs1: Double = 0
     @State private var totalProtein1: Double = 0
     @State private var totalFat1: Double = 0
+    
+    @State private var goalCarbs1: Double = 0
+    @State private var goalPro1: Double = 0
+    @State private var goalFat1: Double = 0
+    
+    // dummy
+    @AppStorage("burnedInt") var burnedInt = 0
 
 
     init() {
         UITabBar.appearance().isHidden = true
+       // loginVM.getDiet()
     }
     
     var body: some View {
         
         VStack(spacing: 0.0) {
             mainView
+                //.environmentObject(loginVM)
             // Custom TabBar
             CustomTabBar(centerY: $centerY)
             
@@ -85,7 +102,9 @@ struct MainView: View {
                     // Side Menu Button
                     if !menuOpened {
                         Button(action: {
-                            self.menuOpened.toggle()
+                            //self.menuOpened.toggle()
+                            //loginVM.getDiet()
+                            LoginViewModel().getDiet()
                         }, label: {
                             Image("sideMenuButton")
                                 .resizable()
@@ -104,7 +123,7 @@ struct MainView: View {
                     .padding(.horizontal, 25)
                     .padding(.bottom, 20)
                                 
-                DailyOverView(intake: $totalCalorie1, caloriesBurned: $burnedInt1, goalSetToday: $goalInt1, goalRatio: $goalRatio, carbsIntake: $totalCarbs1,proteinIntake: $totalProtein1,fatIntake: $totalFat1)
+                DailyOverView(intake: $intakeCalorie, caloriesBurned: $burnedInt1, goalSetToday: $goalInt1, goalCarbs: $goalCarbs1, goalProtein: $goalPro1, goalFat: $goalFat1,goalRatio: $goalRatio, carbsIntake: $totalCarbs1,proteinIntake: $totalProtein1,fatIntake: $totalFat1)
                     .frame(maxWidth: .infinity, maxHeight: 140, alignment: .center)
                     .background(
                         Image("subsNavigationBackground")
@@ -135,15 +154,28 @@ struct MainView: View {
         } // ends of ZStack
         .edgesIgnoringSafeArea(.all)
         .onAppear {
-                        
-            totalCalorie1 = totalCalorie
-            burnedInt1 = burnedInt
-            goalInt1 = goalInt
-            goalRatio = ((totalCalorie - Double(burnedInt)) / goalInt) * 100.0
-            totalFat1 = totalFat
+            
+            @ObservedObject var loginVM = LoginViewModel()
+            loginVM.getDiet()
+            
+            // !!! intakeCalorie girilecek daha requeste eklenmedi !!!
+            intakeCalorie = totalCalorie
+            
+            // intake fat, Carbs, Protein
             totalCarbs1 = totalCarbs
+            totalFat1 = totalFat
             totalProtein1 = totalProtein
             
+            // default değer
+            burnedInt1 = burnedInt
+            
+            // goal
+            goalInt1 = goalInt
+            goalCarbs1 = goalCarbs
+            goalFat1 = goalFat
+            goalPro1 = goalPro
+            goalRatio = ((totalCalorie - Double(burnedInt)) / goalInt) * 100.0
+    
         }
         
     }

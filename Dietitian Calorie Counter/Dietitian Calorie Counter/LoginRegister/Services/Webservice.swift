@@ -37,6 +37,20 @@ struct LoginResponse2: Codable {
     let id: Int?
 }
 
+//MARK: - Get Diet
+
+// !!! intakeCalorie eklenecek !!!
+struct GetDietResponse: Codable {
+    let totalCal: Double?
+    let totalCarbohydrate: Double?
+    let totalFat: Double?
+    let totalProtein: Double?
+    
+    let intakeCarbohydrate: Double?
+    let intakeFat: Double?
+    let intakeProtein: Double?
+}
+
 
 class Webservice {
     
@@ -45,7 +59,13 @@ class Webservice {
         
         print("LOGIN2 START, tckn: ",tckn, "password: ",password)
         
-        guard let url = URL(string: "http://localhost:8080/api/v1/login") else {
+        /*
+         guard let url = URL(string: "http://localhost:8080/api/v1/login") else {
+         completion(.failure(.custom(errorMessage: "URL is not correct")))
+         return
+         }*/
+        
+        guard let url = URL(string: "https://dieticianpatientapp.onrender.com/api/v1/login") else {
             completion(.failure(.custom(errorMessage: "URL is not correct")))
             return
         }
@@ -95,16 +115,23 @@ class Webservice {
     }
     
     
-    
     //MARK: - Register
     func register(firstName: String, lastName: String, tckn: String, password: String, completion: @escaping (Result<RegisterResponse, AuthenticationError>) -> Void) {
         
         print("REGISTER START, tckn: ",tckn, "password: ",password, "firstName: ",firstName,"lastName: ",lastName)
         
-        guard let url = URL(string: "http://localhost:8080/api/v1/register/patient") else {
+        /*
+         guard let url = URL(string: "http://localhost:8080/api/v1/register/patient") else {
+         completion(.failure(.custom(errorMessage: "URL is not correct")))
+         return
+         } */
+        
+        guard let url = URL(string: "https://dieticianpatientapp.onrender.com/api/v1/register/patient") else {
             completion(.failure(.custom(errorMessage: "URL is not correct")))
             return
         }
+        
+        
         
         //let body = LoginRequestBody2(tckn: "30630654611", password: "Password123")
         //let body = LoginRequestBody2(tckn: tckn, password: password)
@@ -147,6 +174,36 @@ class Webservice {
     }
     
     
+    //MARK: - get diet
+    func getDiet(token: String,patientId: String, completion: @escaping (Result<GetDietResponse, NetworkError>) -> Void) {
+        
+        guard let url = URL(string: "https://dieticianpatientapp.onrender.com/api/v1/diet?patientId=\(patientId)") else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+       // request.addValue(patientId, forHTTPHeaderField: "patientId")
+        
+        print("getDietURL: ", request)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let data = data, error == nil else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            guard let diet = try? JSONDecoder().decode(GetDietResponse.self, from: data) else {
+                completion(.failure(.decodingError))
+                return
+            }
+            
+            completion(.success(diet))
+        }.resume()
+    }// ends of getAllAccounts
+    
     //MARK: - get request example
     func getAllAccounts(token: String, completion: @escaping (Result<[Account], NetworkError>) -> Void) {
         
@@ -171,11 +228,9 @@ class Webservice {
             }
             
             completion(.success(accounts))
-            
-            
-            
         }.resume()
-        
-        
-    }
+    }// ends of getAllAccounts
+    
+    
+    
 }

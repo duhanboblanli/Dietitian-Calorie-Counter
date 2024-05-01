@@ -127,6 +127,11 @@ struct DailyOverView : View {
     @Binding var intake: Double
     @Binding var caloriesBurned: Int
     @Binding var goalSetToday: Double
+    
+    @Binding var goalCarbs: Double
+    @Binding var goalProtein: Double
+    @Binding var goalFat: Double
+    
     @Binding var goalRatio : Double
     @Binding var carbsIntake : Double
     @Binding var proteinIntake : Double
@@ -231,6 +236,7 @@ struct DailyOverView : View {
         }
         let totalCalories = self.goalSetToday // Toplam günlük kalori alımı
 
+        /*
         // Önerilen yüzdelik oranlar
         let carbPercentage = 0.50 // %50
         let proteinPercentage = 0.25 // %25
@@ -250,6 +256,7 @@ struct DailyOverView : View {
         let carbGrams = carbCalories / carbCaloriesPerGram
         let proteinGrams = proteinCalories / proteinCaloriesPerGram
         let fatGrams = fatCalories / fatCaloriesPerGram
+        */
         
         HStack {
             // Başlık: Carbs
@@ -263,13 +270,13 @@ struct DailyOverView : View {
                 
                 Spacer().frame(height: 10)
                 
-                CustomLinearProgressBar(value: carbsIntake, total: carbGrams, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
+                CustomLinearProgressBar(value: carbsIntake, total: self.goalCarbs, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
                     .frame(height: 5)
                     
                     
                 Spacer().frame(height: 10)
                 
-                Text("\(String(format: "%.1f", carbsIntake)) / \(Int(carbGrams))g")
+                Text("\(String(format: "%.1f", carbsIntake)) / \(Int(self.goalCarbs))g")
                     .font(.custom(FontsManager.Poppins.bold, size: 14))
                     .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
                 
@@ -284,15 +291,14 @@ struct DailyOverView : View {
                     .font(.custom(FontsManager.Poppins.bold, size: 17))
                     .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
            
-                
                 Spacer().frame(height: 10)
                 
-                CustomLinearProgressBar(value: proteinIntake, total: proteinGrams, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
+                CustomLinearProgressBar(value: proteinIntake, total: self.goalProtein, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
                     .frame(height: 5)
                     
                     
                 Spacer().frame(height: 10)
-                Text("\(String(format: "%.1f", proteinIntake)) / \(Int(proteinGrams))g")
+                Text("\(String(format: "%.1f", proteinIntake)) / \(Int(self.goalProtein))g")
 
                     .font(.custom(FontsManager.Poppins.bold, size: 14))
                     .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
@@ -308,14 +314,14 @@ struct DailyOverView : View {
                 
                 Spacer().frame(height: 10)
                 
-                CustomLinearProgressBar(value: fatIntake, total: fatGrams, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
+                CustomLinearProgressBar(value: fatIntake, total: self.goalFat, barWidth: 300, barHeight: 5, gradientColors: [Color("subsBlueGradient"), Color("subsPinkGradient")])
                     .frame(height: 5)
                     
                     
                 Spacer().frame(height: 10)
                 
                 
-                Text("\(String(format: "%.1f", fatIntake)) / \(Int(fatGrams))g")
+                Text("\(String(format: "%.1f", fatIntake)) / \(Int(self.goalFat))g")
                     .font(.custom(FontsManager.Poppins.bold, size: 14))
                     .foregroundColor(colorScheme == .dark ? Color(red: 0.09, green: 0.11, blue: 0.21) : Color(red: 0.96, green: 0.96, blue: 0.96))
             }

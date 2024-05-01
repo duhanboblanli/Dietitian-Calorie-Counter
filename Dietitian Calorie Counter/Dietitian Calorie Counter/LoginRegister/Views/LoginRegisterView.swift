@@ -9,13 +9,14 @@ import SwiftUI
 
 struct LoginRegisterView: View {
     
-    @StateObject private var loginVM = LoginViewModel()
-    @StateObject private var accountListVM = AccountListViewModel()
+    //@StateObject private var loginVM = LoginViewModel()
+    //@StateObject private var accountListVM = AccountListViewModel()
     
     @State var confirmationPassword: String
     @State var registerMode: Bool = false
     @State private var errorMessage: String = ""
     @EnvironmentObject var navController: NavigationController
+    @EnvironmentObject var loginVM : LoginViewModel
 
 
     var body: some View {
@@ -23,10 +24,11 @@ struct LoginRegisterView: View {
             StaticBackground()
 
             VStack {
+                /*
                 HStack {
                     Text(loginVM.isAuthenticated ? "Token authenticated" : "Token not authenticated")
                     Image(systemName: loginVM.isAuthenticated ? "lock.fill": "lock.open")
-                }
+                } */
                
                 VStack(spacing: 10) {
                     Spacer().frame(height: 10)
@@ -248,6 +250,7 @@ struct LoginRegisterView: View {
                     } */
                 }
                 
+                /*
                 Spacer().frame(height: 20)
                 VStack {
                     
@@ -282,7 +285,7 @@ struct LoginRegisterView: View {
                     }
                     
                     
-                }.frame(maxWidth: .infinity, maxHeight: 200)
+                }.frame(maxWidth: .infinity, maxHeight: 200) */
 
                 
                 
