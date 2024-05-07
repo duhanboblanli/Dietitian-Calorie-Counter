@@ -100,8 +100,8 @@
 "SAVED_TO_GALLERY" = "Saved to Gallery!";
 
 //  FAQ
-"Q1" = "What is Image Segmentation?";
-"A1" = "Image Segmentation is a process used to separate an image into different objects or regions. Our app is designed to perform this process.";
+"Q1" = "What is Calorie Counter?";
+"A1" = "Calorie Counter is your ultimate tool for tracking your daily food intake and managing your calorie consumption effortlessly. With a vast database of foods and personalized features, achieving your health goals has never been easier. Let's start your journey to a healthier lifestyle today with Calorie Counter!";
 "Q2" = "How can I use your app?";
 "A2" = "Open the app, select the image you wanted to segment, then initiate the Image Segmentation process. When it's complete, you can tap on to the objects you want to cut out and create your cut-out list then download or share.";
 "Q3" = "How long does the processing take?";

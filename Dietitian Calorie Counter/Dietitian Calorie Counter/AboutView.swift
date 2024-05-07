@@ -109,7 +109,7 @@ struct AboutView: View {
                             .padding(.leading,20)
                             .padding(.trailing,20)
                         
-                        Text("email-string".localized(language))
+                        Text("05190000106@ogrenci.ege.edu.tr".localized(language))
                             .font(.custom(FontsManager.Poppins.medium, size: 16))
                             .foregroundColor(Color("textColor"))
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -122,7 +122,7 @@ struct AboutView: View {
                 
                 Spacer()
                 // Add the FOGOSOFT Ltd. text at the bottom
-                Text("ltd-string".localized(language))
+                Text("Ege University CENG".localized(language))
                     .font(.custom(FontsManager.Poppins.medium, size: 16))
                     .foregroundColor(Color("textColor"))
                     .padding(.bottom)

@@ -19,9 +19,10 @@ struct MenuContent: View {
     var items: [MenuItem] {
         return [
             MenuItem(text: "settings-string".localized(language), imageName: "settings"),
-            MenuItem(text: "subscription-plan-string".localized(language), imageName: "buy_subscribe"),
             MenuItem(text: "faq-string".localized(language), imageName: "faqs"),
-            MenuItem(text: "about-string".localized(language), imageName: "about_us")
+            MenuItem(text: "about-string".localized(language), imageName: "about_us"),
+            MenuItem(text: "Logout", imageName: "home-icon")
+
         ]
     }
     
@@ -41,7 +42,7 @@ struct MenuContent: View {
                             navController.path.append(.settings)
                         /*case "subscription-plan-string".localized(language):
                             destinationView = AnyView(storeVM.purchasedSubscriptions.isEmpty ? AnyView(SubscriptionView(viewModel: SubscriptionViewModel())) : AnyView(SubscribedUserView(viewModel: SubscriptionViewModel()))) */
-                        case "subscription-plan-string".localized(language):
+                        case "Logout":
                             navController.path.append(.subscription)
 //                            destinationView = AnyView(SubscriptionContentView())
                         case "faq-string".localized(language):
