@@ -2,8 +2,6 @@
 
 <img width="240" alt="Ekran Resmi 2024-05-07 18 45 56" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/7552fc55-e03c-4e27-875b-bf519e6d4caa"><img width="240" alt="Ekran Resmi 2024-05-07 18 46 35" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/b6af25f4-2688-4f1b-a88b-5a4aebbe949b"><img width="240" alt="main" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/bf01fca9-8e6f-48f3-a9e2-721d805705e5"><img width="240" alt="Ekran Resmi 2024-05-07 18 48 47" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/f4a4016b-e0a8-4bff-88c0-3cdc907f7a72">
 
-The purpose of this thesis is to facilitate communication between dietitians and their clients and to improve the management of diet programs. Clients can track their daily eating habits to reach the goals set by the dietitian and communicate with the dietitian through the app. Dietitians can monitor their clients' daily eating habits, make necessary interventions, and manage the diet program more effectively.
-
 ![Badge](https://img.shields.io/badge/Dietition-Application-yellowgreen)
 ![Badge](https://img.shields.io/badge/Nutrition-App-Pink)
 ![badge](https://img.shields.io/badge/Platfrom-iOS-yellowgreen)
@@ -12,33 +10,20 @@ The purpose of this thesis is to facilitate communication between dietitians and
 ![Badge](https://img.shields.io/badge/Pod-Docker-gold) 
 ![Badge](https://img.shields.io/badge/License-MIT-yellow) 
 
-# Introduction ⚒  
+# Purpose: Development Goals and Objectives
+ 
+The purpose of this thesis is to facilitate communication between dietitians and their clients and to improve the management of diet programs. Clients can track their daily eating habits to reach the goals set by the dietitian and communicate with the dietitian through the app. Dietitians can monitor their clients' daily eating habits, make necessary interventions, and manage the diet program more effectively.
 
-KAJU: Calorie Counter & Recipes, basically KAJU helps the user to find 600,000+ recipes and foods with help of one key ingredient. 
-Also, user can get recipes and foods with a single search. User can get the nutritional content and instructions for the food he will cook. 
-Our motive for developing this app was to help people who are pretty confused while cooking and also want to keep track of how many of their calories come from it. 
-We hope it will be useful to people who fight against unhealthy diets and waste a lot of time finding healthy recipes.
+# Applications Developed Within the Scope of the Thesis
 
-# Steps to Run 📲
+As part of the thesis, an iOS application for Dietitians was developed using Swift, an Android application for Clients was developed using Kotlin, and a backend application was developed using Java with Spring Boot.
 
-* Clone or download the app from this repository. 💾
-* Open project file in terminal. 💻
-* Run pod install to install all dependencies. 📥
-* Open the KAJU.workspace file. 🔓
-* Change the bundle Identifier. ⚙️
-* Press Ctrl + R to run the app. 📲
+# Methodology: Software Architecture and Technologies
 
-# How to Use 👩‍💻
+The software architecture chosen is a monolithic architecture, with a layered architecture created. For security purposes, user authentication and authorization processes are provided using the JWT mechanism. Hibernate is used as the ORM technology, and MySQL relational database is preferred for data management.
 
-* As soon as the app launches you will get a register/login screen.
-* After completing the registration, enter the requested information about you.
-* We need your goal, daily activity level, sex, current age, height, and weight to accurately calculate your BMI and calorie needs.
-* After that, you can start your plan and enter foods/recipes for different lunch types.
-* Then you will get an option of a search bar, and type that one key ingredient for which you have to find food or recipe.
-* Click on the food or recipe which you found good, and you will get the whole list of ingredients, instructions, and calorie values.
-* Access the foods and recipes you have added to your favorites offline.
-* Try an egg timer for different types of boiled eggs.
-* Change your personal information and preferences from the profile page.
+![Resim1](https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/efbd1668-d6d2-40cb-b576-e64551146208)
+
 
 
 # Libraries/Frameworks Used in Project 📒 
