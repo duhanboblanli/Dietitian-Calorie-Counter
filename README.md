@@ -1,25 +1,15 @@
-# Calorie and Nutrition Tracker System for Dietitian&Patient
-
+# Final Thesis: Calorie and Nutrition Tracker System for Dietitian&Patient
 
 <img width="240" alt="Ekran Resmi 2024-05-07 18 45 56" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/7552fc55-e03c-4e27-875b-bf519e6d4caa"><img width="240" alt="Ekran Resmi 2024-05-07 18 46 35" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/b6af25f4-2688-4f1b-a88b-5a4aebbe949b"><img width="240" alt="main" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/bf01fca9-8e6f-48f3-a9e2-721d805705e5"><img width="240" alt="Ekran Resmi 2024-05-07 18 48 47" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/f4a4016b-e0a8-4bff-88c0-3cdc907f7a72">
 
+The purpose of this thesis is to facilitate communication between dietitians and their clients and to improve the management of diet programs. Clients can track their daily eating habits to reach the goals set by the dietitian and communicate with the dietitian through the app. Dietitians can monitor their clients' daily eating habits, make necessary interventions, and manage the diet program more effectively.
 
-
-[tezposter (1).pptx](https://github.com/user-attachments/files/15593894/tezposter.1.pptx)
-
-
-
-
-KAJU is an app used to calculate BMI and daily calorie needs, tracks user calories, and offers over 600,000 foods and recipes.
-
-![Badge](https://img.shields.io/badge/Recipe-Application-yellowgreen)
+![Badge](https://img.shields.io/badge/Dietition-Application-yellowgreen)
 ![Badge](https://img.shields.io/badge/Nutrition-App-Pink)
-![Bade](https://img.shields.io/badge/Pod-FirebaseAuth-orange)
-![Badge](https://img.shields.io/badge/Pod-FirebaseFirestore-gold) 
 ![badge](https://img.shields.io/badge/Platfrom-iOS-yellowgreen)
-![Badge](https://img.shields.io/badge/Xcode-14.2-blue)
-![badge](https://img.shields.io/badge/Swift-5.1-red)
-![badge](https://img.shields.io/badge/iOS-16-yellow)
+![badge](https://img.shields.io/badge/Platfrom-Android-yellowgreen)
+![Bade](https://img.shields.io/badge/Pod-Java-orange)
+![Badge](https://img.shields.io/badge/Pod-Docker-gold) 
 ![Badge](https://img.shields.io/badge/License-MIT-yellow) 
 
 # Introduction ⚒  
