@@ -6,13 +6,9 @@
 ![Badge](https://img.shields.io/badge/Nutrition-App-Pink)
 ![Badge](https://img.shields.io/badge/Chat-App-Pink)
 ![badge](https://img.shields.io/badge/Platfrom-iOS-blue)
-![badge](https://img.shields.io/badge/Platfrom-Android-yellowgreen)
+![badge](https://img.shields.io/badge/Platfrom-Android-gold)
 ![badge](https://img.shields.io/badge/Platfrom-Java-orange)
 ![badge](https://img.shields.io/badge/Platfrom-Docker-yellowgreen)
-
-
-![Bade](https://img.shields.io/badge/Pod-Java-orange)
-![Badge](https://img.shields.io/badge/Pod-Docker-gold) 
 ![Badge](https://img.shields.io/badge/License-MIT-yellow) 
 
 # Purpose: Development Goals and Objectives
