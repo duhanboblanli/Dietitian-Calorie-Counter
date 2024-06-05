@@ -16,7 +16,7 @@
  
 The purpose of this thesis is to facilitate communication between dietitians and their clients and to improve the management of diet programs. Clients can track their daily eating habits to reach the goals set by the dietitian and communicate with the dietitian through the app. Dietitians can monitor their clients' daily eating habits, make necessary interventions, and manage the diet program more effectively.
 
-# Applications Developed Within the Scope of the Thesis
+# Applications Developed: Within the Scope of the Thesis
 
 As part of the thesis, an iOS application for Dietitians was developed using Swift, an Android application for Clients was developed using Kotlin, and a backend application was developed using Java with Spring Boot.
 
@@ -24,7 +24,7 @@ As part of the thesis, an iOS application for Dietitians was developed using Swi
 
 The software architecture chosen is a monolithic architecture, with a layered architecture created. For security purposes, user authentication and authorization processes are provided using the JWT mechanism. Hibernate is used as the ORM technology, and MySQL relational database is preferred for data management.
 
-![Resim1](https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/efbd1668-d6d2-40cb-b576-e64551146208)
+![Resim1](https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/efbd1668-d6d2-40cb-b576-e64551146208 =300x300)
 
 
 
