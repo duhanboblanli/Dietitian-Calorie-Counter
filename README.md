@@ -24,7 +24,7 @@ As part of the thesis, an iOS application for Dietitians was developed using Swi
 
 The software architecture chosen is a monolithic architecture, with a layered architecture created. For security purposes, user authentication and authorization processes are provided using the JWT mechanism. Hibernate is used as the ORM technology, and MySQL relational database is preferred for data management.
 
-![Resim1](https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/efbd1668-d6d2-40cb-b576-e64551146208 =300x300)
+<img width="655" alt="Ekran Resmi 2024-06-05 20 12 15" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/8d131daa-3bcd-4e93-9507-572e6c3f0227">
 
 
 
