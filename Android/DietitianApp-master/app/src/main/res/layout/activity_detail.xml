@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary_subtle"
+    tools:context=".presentation.Detail.DetailActivity">
+
+    <ImageButton
+        android:id="@+id/iv_back"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_back_background"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="5dp"
+        android:src="@drawable/ic_back"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_patient_profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        app:cardCornerRadius="75dp">
+
+        <TextView
+            android:id="@+id/tvProfileImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text=""
+            android:gravity="center"
+            android:textSize="60sp"
+            android:background="@drawable/background_profile_img"
+            android:textColor="@color/bg_primary_subtle"
+            android:fontFamily="@font/arvo"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/cv_patient_profile_image">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPatientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv_patient_profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Dummy Client"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/tvPatientInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPatientName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/cv_patient_profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/tvPatientName" />
+
+    <LinearLayout
+        android:id="@+id/ll_intake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/tvPatientInfo"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/bg_calories">
+        <TextView
+            android:id="@+id/tv_intake_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intakeCal"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/tv_intake_carbonhydrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Karbonhidrat:0 gram"
+            android:drawableStart="@drawable/ic_carbonhydrate"
+            android:drawablePadding="5dp"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginVertical="5dp"/>
+        <TextView
+            android:id="@+id/tv_intake_fat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yağ: 0 gram"
+            android:drawableStart="@drawable/ic_fat"
+            android:drawablePadding="5dp"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginVertical="5dp"/>
+        <TextView
+            android:id="@+id/tv_intake_protein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Protein: 0 gram"
+            android:textSize="16sp"
+            android:drawableStart="@drawable/ic_protein"
+            android:drawablePadding="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_intake"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/bg_calories">
+        <TextView
+            android:id="@+id/tv_total_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total CAL:"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/tv_total_carbonhydrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_carbonhydrate"
+            android:drawablePadding="5dp"
+            android:text="Karbonhidrat: 0 gram"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginVertical="5dp" />
+        <TextView
+            android:id="@+id/tv_total_fat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yağ: 0 gram"
+            android:drawableStart="@drawable/ic_fat"
+            android:drawablePadding="5dp"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginVertical="5dp"/>
+        <TextView
+            android:id="@+id/tv_total_protein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Protein: 0 gram"
+            android:drawableStart="@drawable/ic_protein"
+            android:drawablePadding="5dp"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_calorie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yeni kalori girişi"
+        android:padding="15dp"
+        android:layout_below="@id/ll_total"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"/>
+    <com.example.dietitianapp.presentation.custom.AddPatientView
+        android:id="@+id/cv_add_patient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <com.example.dietitianapp.presentation.custom.CustomLoadingView
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

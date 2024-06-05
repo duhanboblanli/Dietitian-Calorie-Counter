@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "618250206439",
+    "firebase_url": "https://dietitian-calorie-counter-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "dietitian-calorie-counter",
+    "storage_bucket": "dietitian-calorie-counter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618250206439:android:ddd67fd4b1c3dfaa663642",
+        "android_client_info": {
+          "package_name": "com.ex.vlvlv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByTGt8gtpeHccNjWk1b_2PoHblbM7nlfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618250206439:android:8410bc7ac7719643663642",
+        "android_client_info": {
+          "package_name": "com.example.dietitianapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByTGt8gtpeHccNjWk1b_2PoHblbM7nlfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
