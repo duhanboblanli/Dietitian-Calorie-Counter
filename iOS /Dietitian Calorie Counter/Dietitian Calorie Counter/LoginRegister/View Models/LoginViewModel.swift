@@ -10,8 +10,8 @@ import SwiftUI
 
 class LoginViewModel: ObservableObject {
     
-    var username: String = "71448547211"
-    var password: String = "pAssword123"
+    var username: String = "12345678910"
+    var password: String = "Password123"
     var firstName: String = "duhan"
     var lastName: String = "boblanli"
     var errorMessage: String = ""
