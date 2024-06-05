@@ -1,4 +1,6 @@
  ![Resim1](https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/aae8cfb9-0285-44e5-ad91-47b48978de1d)
+
+ <img width="240" alt="Ekran Resmi 2024-05-07 18 45 56" src="[https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/7552fc55-e03c-4e27-875b-bf519e6d4caa](https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/aae8cfb9-0285-44e5-ad91-47b48978de1d)">
 # Final Thesis: Calorie and Nutrition Tracker System for Dietitian&Patient
 
 <img width="240" alt="Ekran Resmi 2024-05-07 18 45 56" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/7552fc55-e03c-4e27-875b-bf519e6d4caa"><img width="240" alt="Ekran Resmi 2024-05-07 18 46 35" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/b6af25f4-2688-4f1b-a88b-5a4aebbe949b"><img width="240" alt="main" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/bf01fca9-8e6f-48f3-a9e2-721d805705e5"><img width="240" alt="Ekran Resmi 2024-05-07 18 48 47" src="https://github.com/duhanboblanli/Dietitian-Calorie-Counter/assets/77344408/f4a4016b-e0a8-4bff-88c0-3cdc907f7a72">
