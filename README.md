@@ -9,6 +9,7 @@
 ![badge](https://img.shields.io/badge/Platfrom-Android-gold)
 ![badge](https://img.shields.io/badge/Platfrom-Java-orange)
 ![badge](https://img.shields.io/badge/Platfrom-Docker-yellowgreen)
+![badge](https://img.shields.io/badge/Platfrom-MySQL-red)
 ![Badge](https://img.shields.io/badge/License-MIT-yellow) 
 
 # Purpose: Development Goals and Objectives
